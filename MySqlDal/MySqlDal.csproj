@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2B59F12B-7B5E-4539-ACC7-7B2D3E40C6EF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MySqlDal</RootNamespace>
+    <AssemblyName>MySqlDal</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mysql.data">
+      <HintPath>..\ui\dll\mysql.data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="adminUserDB.cs" />
+    <Compile Include="attrDB.cs" />
+    <Compile Include="BoxDB.cs" />
+    <Compile Include="BrandDB.cs" />
+    <Compile Include="MenuDB.cs" />
+    <Compile Include="ColorDB.cs" />
+    <Compile Include="CouponDB.cs" />
+    <Compile Include="DBBase.cs" />
+    <Compile Include="expPayDB.cs" />
+    <Compile Include="expPlaceDB.cs" />
+    <Compile Include="FlashDB.cs" />
+    <Compile Include="imgDB.cs" />
+    <Compile Include="KeywordsDB.cs" />
+    <Compile Include="LinkDB.cs" />
+    <Compile Include="MessageDB.cs" />
+    <Compile Include="MySqlLiveHelper.cs" />
+    <Compile Include="NewsDB.cs" />
+    <Compile Include="OrderDB.cs" />
+    <Compile Include="OrderItemDB.cs" />
+    <Compile Include="OrderProBD.cs" />
+    <Compile Include="PlaceDB.cs" />
+    <Compile Include="PriceDB.cs" />
+    <Compile Include="ProductsDB.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReturnOrderDB.cs" />
+    <Compile Include="SearchWordsDB.cs" />
+    <Compile Include="SupplyDB.cs" />
+    <Compile Include="SupplyvalueDB.cs" />
+    <Compile Include="UserDB.cs" />
+    <Compile Include="UserFavoriteDB.cs" />
+    <Compile Include="VisitorsReportDB.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mo\mo.csproj">
+      <Project>{24646F1D-391D-443E-A7EC-1D0D2A34C6EF}</Project>
+      <Name>mo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
