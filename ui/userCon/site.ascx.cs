@@ -1,4 +1,5 @@
-﻿using System;
+﻿using op;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +11,7 @@ public partial class userCon_site : System.Web.UI.UserControl
     {
         if (!IsPostBack)
         {
-            dataBin.dataBin databin = new dataBin.dataBin();
+            dataBin databin = new dataBin();
             liSite.Text = databin.getSite(Request.Url.AbsolutePath.ToLower().Replace("/testsite/",""), Request.QueryString["id"], Request.QueryString["typ"]);
         }
     }

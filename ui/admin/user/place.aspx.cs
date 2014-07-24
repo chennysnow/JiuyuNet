@@ -22,7 +22,7 @@ public partial class admin_user_place : System.Web.UI.Page
         }
     }
     //dal.place place = new dal.place();
-    MySqlDal.PlaceDB place = new MySqlDal.PlaceDB();
+    dal.PlaceDB place = new dal.PlaceDB();
     private void bin()
     {
         List<mo.place> modelList = place.getModelListAll();

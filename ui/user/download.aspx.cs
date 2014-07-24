@@ -13,7 +13,7 @@ public partial class user_download : System.Web.UI.Page
         if (!IsPostBack)
         {
             //dal.flash flash = new dal.flash();
-            MySqlDal.FlashDB flash = new MySqlDal.FlashDB();
+            dal.FlashDB flash = new dal.FlashDB();
             List<mo.flash> modelList = flash.getModelListWhere("where typS='file'");
             repList.DataSource = modelList;
             repList.DataBind();

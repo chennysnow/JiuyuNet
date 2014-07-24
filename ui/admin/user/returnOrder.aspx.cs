@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 public partial class admin_user_returnOrder : System.Web.UI.Page
 {
     //dal.returnOrder retOrder = new dal.returnOrder();
-    MySqlDal.ReturnOrderDB retOrder = new MySqlDal.ReturnOrderDB();
+    dal.ReturnOrderDB retOrder = new dal.ReturnOrderDB();
     public op.staValue staValue = new op.staValue();
     protected void Page_Load(object sender, EventArgs e)
     {

@@ -28,7 +28,7 @@ public class ajax : IHttpHandler {
         if (id != 0)
         {
             //dal.price pri = new dal.price();
-            MySqlDal.PriceDB pri = new MySqlDal.PriceDB();
+            dal.PriceDB pri = new dal.PriceDB();
             price = pri.getString("priceC", "where typ=" + id + " and minC<=" + count + " order by priceC asc");
             if (string.IsNullOrEmpty(price))
             {
@@ -45,7 +45,7 @@ public class ajax : IHttpHandler {
     {
         string id = context1.Request.QueryString["id"];
         //dal.expPlace expPlace = new dal.expPlace();
-        MySqlDal.expPlaceDB expPlace = new MySqlDal.expPlaceDB();
+        dal.expPlaceDB expPlace = new dal.expPlaceDB();
         //List<mo.expPlace> modelList = expPlace.getModelListWhere("where placeId=" + id);
 
         org.jiuyu.express.ExpService service = new org.jiuyu.express.ExpService();
@@ -64,7 +64,7 @@ public class ajax : IHttpHandler {
     private void regMail()
     {
         //dal.message message = new dal.message();
-        MySqlDal.MessageDB message = new MySqlDal.MessageDB();
+        dal.MessageDB message = new dal.MessageDB();
         mo.message model = new mo.message();
         op.Operation ope = new op.Operation();
         model.mailC = ope.StrEncode(context1.Request.QueryString["mail"]);

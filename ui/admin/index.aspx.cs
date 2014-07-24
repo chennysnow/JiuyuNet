@@ -26,23 +26,23 @@ public partial class admin_index : System.Web.UI.Page
     private void binOrder()
     {
         //dal.order order = new dal.order();
-        MySqlDal.OrderDB order = new MySqlDal.OrderDB();
+        dal.OrderDB order = new dal.OrderDB();
         List<mo.order> modelList = order.getModelListWhere("top 15","");
         repOrder.DataSource = modelList;
         repOrder.DataBind();
     }
     private void binUser()
     {
-        MySqlDal.UserDB user = new MySqlDal.UserDB();
-        //MySqlDal.UserDB user = new MySqlDal.UserDB();
-        List<mo.user> modelList = user.getModelListWhere("LIMIT 15", "");
+        dal.UserDB user = new dal.UserDB();
+        //dal.UserDB user = new dal.UserDB();
+        List<mo.user> modelList = user.getModelListWhere("top 15", "");
         repUser.DataSource = modelList;
         repUser.DataBind();
     }
     private void binSiteRemind()
     {
         //dal.order order = new dal.order();
-        MySqlDal.OrderDB order = new MySqlDal.OrderDB();
+        dal.OrderDB order = new dal.OrderDB();
         string count = order.getString("count(*)","");
         string count_1 = order.getString("count(*)", "where typ=0");
         string count_2 = order.getString("count(*)", "where typ=1");
@@ -56,7 +56,7 @@ public partial class admin_index : System.Web.UI.Page
         sb.Length = 0;
         //会员
         //dal.user user = new dal.user();
-        MySqlDal.UserDB user = new MySqlDal.UserDB();
+        dal.UserDB user = new dal.UserDB();
         count = user.getString("count(*)", "");
         count_1 = user.getString("count(*)", "where timeC>#" + DateTime.Now.AddDays(-1) + "#");
         count_2 = user.getString("count(*)", "where timeC>#" + DateTime.Now.AddDays(-2) + "#");
@@ -66,7 +66,7 @@ public partial class admin_index : System.Web.UI.Page
         liMember.Text = sb.ToString();
         sb.Length = 0;
         //dal.products pro = new dal.products();
-        MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+        dal.ProductsDB pro = new dal.ProductsDB();
         count = pro.getString("count(*)", "");
         count_1 = pro.getString("count(*)", "where stockC<'10'");
         count_2 = pro.getString("count(*)", "where stockC<='0'");
@@ -78,7 +78,7 @@ public partial class admin_index : System.Web.UI.Page
         liGoods.Text = sb.ToString();
         sb.Length = 0;
         //dal.news news = new dal.news();
-        MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+        dal.NewsDB news = new dal.NewsDB();
         count = news.getString("count(*)", "where typS='0'");
         count_1 = news.getString("count(*)", "where timeC>#" + DateTime.Now.AddDays(-1) + "#");
         count_2 = news.getString("count(*)", "where timeC>#" + DateTime.Now.AddDays(-2) + "#");
@@ -88,7 +88,7 @@ public partial class admin_index : System.Web.UI.Page
         liNews.Text = sb.ToString();
         sb.Length = 0;
         //dal.message message = new dal.message();
-        MySqlDal.MessageDB message = new MySqlDal.MessageDB();
+        dal.MessageDB message = new dal.MessageDB();
         count = message.getString("count(*)", "");
         count_1 = message.getString("count(*)", "where timeC>#" + DateTime.Now.AddDays(-1) + "#");
         count_2 = message.getString("count(*)", "where timeC>#" + DateTime.Now.AddDays(-2) + "#");
@@ -101,7 +101,7 @@ public partial class admin_index : System.Web.UI.Page
     {
         i = 1;
         //dal.products pro = new dal.products();
-        MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+        dal.ProductsDB pro = new dal.ProductsDB();
         List<mo.products> modelList = pro.getModelListWhere("top 10", "and stockC<'" + op.staValue.stockAlarm+"'", "order by sortC ,id desc");
         repStockAlarm.DataSource = modelList;
         repStockAlarm.DataBind();

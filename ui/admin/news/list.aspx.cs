@@ -13,9 +13,9 @@ public partial class admin_news_list : System.Web.UI.Page
 {
     public op.Operation opera = new op.Operation();
     //dal.news news = new dal.news();
-    MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+    dal.NewsDB news = new dal.NewsDB();
     //public dal.menu menu = new dal.menu();
-   public MySqlDal.MenuDB menu = new MySqlDal.MenuDB();
+   public dal.MenuDB menu = new dal.MenuDB();
     protected void Page_Load(object sender, EventArgs e)
     {
         Master.title = "文章列表";

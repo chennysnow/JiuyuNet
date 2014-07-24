@@ -41,9 +41,9 @@ public partial class Submit : System.Web.UI.Page
                         if (allId != "")
                         {
                             //dal.products pro = new dal.products();
-                            MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+                            dal.ProductsDB pro = new dal.ProductsDB();
                             //dal.price pri = new dal.price();
-                            MySqlDal.PriceDB pri = new MySqlDal.PriceDB();
+                            dal.PriceDB pri = new dal.PriceDB();
                             modelList = pro.getModelListWhere("and id in(" + allId.TrimEnd(',') + ")");
                             for (int i = 0; i < modelList.Count; i++)
                             {
@@ -72,14 +72,14 @@ public partial class Submit : System.Web.UI.Page
                     sb.AppendFormat("<li><div>Name:</div>{0}</li>", Request.Form["nameC"]);
                     sb.AppendFormat("<li><div>Tel:</div>{0}</li>", Request.Form["telC"]);
                     //dal.place pla = new dal.place();
-                    MySqlDal.PlaceDB pla = new MySqlDal.PlaceDB();
+                    dal.PlaceDB pla = new dal.PlaceDB();
                     sb.AppendFormat("<li><div>Country:</div>{0}</li>", Request.Form["selectPlace"]);
                     sb.AppendFormat("<li><div>Address:</div>{0}</li></ul>", Request.Form["addressC"]);
                     ////////////////////////////////////////快递
                     sb.Append("<div class='Head'>Payment And Shipping:</div><ul class='ulInfo'>");//id,首重,续重,名称
                     ViewState["userName"] = Request.Form["mailC"];
                     //dal.expPay expPay = new dal.expPay();
-                    MySqlDal.expPayDB expPay = new MySqlDal.expPayDB();
+                    dal.expPayDB expPay = new dal.expPayDB();
                     string express = Request.Form["radioExpress"];//快递ID
                     string payment = Request.Form["radioPayment"];//支付ID
                     string place = Request.Form["selectPlace"];
@@ -97,7 +97,7 @@ public partial class Submit : System.Web.UI.Page
                     liAddress.Text = sb.ToString();
                     sb.Length = 0;
                     //dal.expPlace expPlace = new dal.expPlace();
-                    MySqlDal.expPlaceDB expPlace = new MySqlDal.expPlaceDB();
+                    dal.expPlaceDB expPlace = new dal.expPlaceDB();
                     string placePrice = expPlace.getString("priceC", "where placeId=" + place + " and typ=" + model_expPay.id);
                     double expPrice = string.IsNullOrEmpty(placePrice) ? 30 : double.Parse(placePrice);//默认15元
                     double allWeight =  proWeight;
@@ -117,7 +117,7 @@ public partial class Submit : System.Web.UI.Page
                     sb.AppendFormat("<p><b>Products Price:</b><span> ${0}</span></p>", proPrice);
                     sb.AppendFormat("<p><b>Grand-Total:</b> <span>${0}</span></p>", allPrice);
                     //折扣
-                    MySqlDal.UserDB user = new MySqlDal.UserDB();
+                    dal.UserDB user = new dal.UserDB();
                     string strDiscount = user.getString("levelC", "where userName='" + ViewState["userName"].ToString()+ "'");
                     if (!string.IsNullOrEmpty(strDiscount))
                     {
@@ -187,7 +187,7 @@ public partial class Submit : System.Web.UI.Page
 
 
         //dal.order order = new dal.order();
-        MySqlDal.OrderDB order = new MySqlDal.OrderDB();
+        dal.OrderDB order = new dal.OrderDB();
         System.IO.StringWriter sw = new System.IO.StringWriter();
         HtmlTextWriter htw = new HtmlTextWriter(sw);
         repProList.RenderControl(htw);
@@ -225,9 +225,9 @@ public partial class Submit : System.Web.UI.Page
             if (allId != "")
             {
                 //dal.products pro = new dal.products();
-                MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+                dal.ProductsDB pro = new dal.ProductsDB();
                 //dal.price pri = new dal.price();
-                MySqlDal.PriceDB pri = new MySqlDal.PriceDB();
+                dal.PriceDB pri = new dal.PriceDB();
                 modelList = pro.getModelListWhere("and id in(" + allId.TrimEnd(',') + ")");
                 for (int i = 0; i < modelList.Count; i++)
                 {
@@ -268,7 +268,7 @@ public partial class Submit : System.Web.UI.Page
 
 
                     //new dal.OrderItem().InsertModel(oitem);
-                    new MySqlDal.OrderItemDB().InsertModel(oitem);
+                    new dal.OrderItemDB().InsertModel(oitem);
 
 
 
@@ -301,7 +301,7 @@ public partial class Submit : System.Web.UI.Page
         if (ViewState["coupon"] == null)
         {
             //dal.coupon coupon = new dal.coupon();
-            MySqlDal.CouponDB coupon = new MySqlDal.CouponDB();
+            dal.CouponDB coupon = new dal.CouponDB();
             string str = op.staValue.RexSpecial(txtCoupon.Text.Trim());
             mo.coupon model = coupon.getModel("where typ=1 and numC='" + str + "'");
             if (model.id != 0)

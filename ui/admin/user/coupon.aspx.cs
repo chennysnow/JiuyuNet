@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 public partial class admin_user_coupon : System.Web.UI.Page
 {
     //dal.coupon coupon = new dal.coupon();
-    MySqlDal.CouponDB coupon = new MySqlDal.CouponDB();
+    dal.CouponDB coupon = new dal.CouponDB();
     protected void Page_Load(object sender, EventArgs e)
     {
         Master.title = "优惠券管理";

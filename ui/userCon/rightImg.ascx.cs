@@ -18,7 +18,7 @@ public partial class userCon_rightImg : System.Web.UI.UserControl
         if (!IsPostBack)
         {
             //dal.flash flash = new dal.flash();
-            MySqlDal.FlashDB flash = new MySqlDal.FlashDB();
+            dal.FlashDB flash = new dal.FlashDB();
             List<mo.flash> modelFlash = flash.getModelListWhere("where typS='right'");
             System.Text.StringBuilder sb = new System.Text.StringBuilder();
             for (int i = 0; i < modelFlash.Count; i++)

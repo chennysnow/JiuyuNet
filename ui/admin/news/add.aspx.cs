@@ -38,7 +38,7 @@ public partial class admin_news_add : System.Web.UI.Page
     protected void BtOk_Click(object sender, EventArgs e)
     {
         //dal.news news = new dal.news();
-        MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+        dal.NewsDB news = new dal.NewsDB();
         mo.news model = new mo.news();
         op.Operation ope = new op.Operation();
         model.id = ope.MaxId("news");

@@ -40,7 +40,7 @@ public partial class Login : System.Web.UI.Page
         op.Operation ope = new op.Operation();
         if (ope.validate(txtCode_r.Text))
         {
-            MySqlDal.UserDB user = new MySqlDal.UserDB();
+            dal.UserDB user = new dal.UserDB();
             if (user.getString("id", "where userName='" + ope.StrEncode(txtUserName_r.Text) + "'") == null)
             {
                 mo.user model = new mo.user();
@@ -74,7 +74,7 @@ public partial class Login : System.Web.UI.Page
         {
             if (ope.IsEmail(txtFindPassword.Text))
             {
-                MySqlDal.UserDB user = new MySqlDal.UserDB();
+                dal.UserDB user = new dal.UserDB();
                 string userName = user.getString("userName", "where userName='" + ope.StrEncode(txtFindPassword.Text) + "'");
                 if (!string.IsNullOrEmpty(userName))
                 {

@@ -15,7 +15,7 @@ public partial class user_backOrder : System.Web.UI.Page
         {
             ViewState["user"] = cook.userJudge();
             //dal.order order = new dal.order();
-            MySqlDal.OrderDB order = new MySqlDal.OrderDB();
+            dal.OrderDB order = new dal.OrderDB();
             List<mo.order> modelList_order = order.getModelListWhere("where userName='" + ViewState["user"].ToString() + "' and typ<>2");
             if (modelList_order.Count > 0)
             {
@@ -38,7 +38,7 @@ public partial class user_backOrder : System.Web.UI.Page
     protected void repRetrunOrder_ItemCommand(object source, RepeaterCommandEventArgs e)
     {
         //dal.returnOrder retOrder = new dal.returnOrder();
-        MySqlDal.ReturnOrderDB retOrder = new MySqlDal.ReturnOrderDB();
+        dal.ReturnOrderDB retOrder = new dal.ReturnOrderDB();
         string id = e.CommandArgument.ToString();
         if (e.CommandName == "del")
         {
@@ -69,7 +69,7 @@ public partial class user_backOrder : System.Web.UI.Page
     private void binRetOrder()
     {
         //dal.returnOrder retOrder = new dal.returnOrder();
-        MySqlDal.ReturnOrderDB retOrder = new MySqlDal.ReturnOrderDB();
+        dal.ReturnOrderDB retOrder = new dal.ReturnOrderDB();
         List<mo.returnOrder> modelList = retOrder.getModelListWhere("where userName='" + ViewState["user"].ToString() + "'");
         repRetrunOrder.DataSource = modelList;
         repRetrunOrder.DataBind();
@@ -100,7 +100,7 @@ public partial class user_backOrder : System.Web.UI.Page
             model.typ = 0;
             model.messageC = txtMessage_return.Text;
             //dal.returnOrder retOrder = new dal.returnOrder();
-            MySqlDal.ReturnOrderDB retOrder = new MySqlDal.ReturnOrderDB();
+            dal.ReturnOrderDB retOrder = new dal.ReturnOrderDB();
             if (lbId_return.Text != "")//判断是修改还是插入
             {
                 model.id = int.Parse(lbId_return.Text);

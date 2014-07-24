@@ -28,7 +28,7 @@ public partial class admin_product_edit : System.Web.UI.Page
         if (Request.Params["id"] != null)
         {
             //dal.products pro = new dal.products();
-            MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+            dal.ProductsDB pro = new dal.ProductsDB();
             model = pro.getModel("where id=" + Request.Params["id"].ToString());
             txtName.Text = model.nameC;
             txtProId.Text = model.proId;
@@ -75,7 +75,7 @@ public partial class admin_product_edit : System.Web.UI.Page
     private void priceBin(string typ)
     {
         //dal.price pri = new dal.price();
-        MySqlDal.PriceDB pri = new MySqlDal.PriceDB();
+        dal.PriceDB pri = new dal.PriceDB();
         List<mo.price> modelList = pri.getModelListWhere("where typ=" + typ);
         //if (modelList.Count <= 0)
         //{
@@ -88,7 +88,7 @@ public partial class admin_product_edit : System.Web.UI.Page
     private void attrBin(string[] attrId, string[] attrValue)
     {
         //dal.attr attr = new dal.attr();
-        MySqlDal.attrDB attr = new MySqlDal.attrDB();
+        dal.attrDB attr = new dal.attrDB();
         List<mo.attr> modelList = attr.getModelListAll();
         for (int i = 0; i < modelList.Count; i++)
         {
@@ -135,7 +135,7 @@ public partial class admin_product_edit : System.Web.UI.Page
         try
         {
             //dal.products pro = new dal.products();
-            MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+            dal.ProductsDB pro = new dal.ProductsDB();
             mo.proInfo model = pro.getModel("where id=" + ViewState["id"].ToString());
             if (img != "")
                 model.imgC = img;
@@ -200,7 +200,7 @@ public partial class admin_product_edit : System.Web.UI.Page
     private string getPrice(int id)
     {
         //dal.price price = new dal.price();
-        MySqlDal.PriceDB price = new MySqlDal.PriceDB();
+        dal.PriceDB price = new dal.PriceDB();
         mo.price model = new mo.price();
         try
         {
@@ -266,7 +266,7 @@ public partial class admin_product_edit : System.Web.UI.Page
             }
 
             //dal.price pri = new dal.price();
-            MySqlDal.PriceDB pri = new MySqlDal.PriceDB();
+            dal.PriceDB pri = new dal.PriceDB();
             pri.DelId(int.Parse(e.CommandArgument.ToString()));
             priceBin(ViewState["id"].ToString());
             i--;
@@ -280,7 +280,7 @@ public partial class admin_product_edit : System.Web.UI.Page
 
 
         //dal.supply att = new dal.supply();
-        MySqlDal.SupplyDB att = new MySqlDal.SupplyDB();
+        dal.SupplyDB att = new dal.SupplyDB();
         List<mo.supply> modelList = att.getModelListAll();
 
 

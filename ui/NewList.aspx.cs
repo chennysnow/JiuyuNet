@@ -27,11 +27,11 @@ public partial class CompanyNewList : System.Web.UI.Page
         typ=typ==0?4:typ;
         AspNetPager1.PageSize =op.staValue.newsSize;
         //dal.menu menu = new dal.menu();
-        MySqlDal.MenuDB menu = new MySqlDal.MenuDB();
+        dal.MenuDB menu = new dal.MenuDB();
         mo.menu model = menu.getModel("where id=" + typ);
         category = model.nameC;
         this.AspNetPager1.UrlRewritePattern = "newList.html?p={0}&typ=" + typ + "";
-        MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+        dal.NewsDB news = new dal.NewsDB();
         //dal.news news = new dal.news();
         List<mo.news> modelList = news.getModelListWhere("and typ="+typ);
         PagedDataSource pds = new PagedDataSource();

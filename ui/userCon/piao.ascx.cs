@@ -18,7 +18,7 @@ public partial class userCon_piao : System.Web.UI.UserControl
         if (!IsPostBack)
         {
             //dal.news news = new dal.news();
-            MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+            dal.NewsDB news = new dal.NewsDB();
             string strContent = news.getString("contentC", "where typS='onLine'");
             op.Operation ope = new op.Operation();
             liContent.Text = ope.StrDecode(strContent);

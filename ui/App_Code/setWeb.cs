@@ -133,9 +133,9 @@ public class setWeb
         }
     }
     //dal.menu menu = new dal.menu();
-    MySqlDal.MenuDB menu = new MySqlDal.MenuDB();
+    dal.MenuDB menu = new dal.MenuDB();
     //dal.products pro = new dal.products();
-    MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+    dal.ProductsDB pro = new dal.ProductsDB();
     /// <summary>
     /// 生成站点地图
     /// </summary>
@@ -153,7 +153,7 @@ public class setWeb
         node.RemoveAll();//清空
         List<mo.menu> modelMenu = menu.getModelListWhere("where typ=2");
         //dal.news news = new dal.news();
-        MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+        dal.NewsDB news = new dal.NewsDB();
         for (int i = 0; i < modelMenu.Count; i++)
         {
             XmlElement xe = xmlDoc.CreateElement("news");//创建车
@@ -224,9 +224,9 @@ public class setWeb
         op.staValue sta = new op.staValue();
         List<mo.menu> modelList = sta.getMenuList(typ);
         //dal.news news = new dal.news();
-        MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+        dal.NewsDB news = new dal.NewsDB();
         //dal.products pro = new dal.products();
-        MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+        dal.ProductsDB pro = new dal.ProductsDB();
         foreach (mo.menu model in modelList)
         {
             string count = "0";

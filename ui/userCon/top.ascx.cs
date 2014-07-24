@@ -18,7 +18,7 @@ public partial class userCon_top : System.Web.UI.UserControl
         if (!IsPostBack)
         {
             //dal.link link = new dal.link();
-            MySqlDal.LinkDB link = new MySqlDal.LinkDB();
+            dal.LinkDB link = new dal.LinkDB();
             List<mo.link> modelLink = link.getModelListWhere("where typS='top'");
             System.Text.StringBuilder sb = new System.Text.StringBuilder();
             for (int i = 0; i < modelLink.Count; i++)
@@ -34,7 +34,7 @@ public partial class userCon_top : System.Web.UI.UserControl
             }
             liTopKeyword.Text = sbtop.ToString(); ;
             //dal.news news = new dal.news();
-            MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+            dal.NewsDB news = new dal.NewsDB();
             String contact = news.getString("aboutC", "where typS='contact'");
             liContact.Text = contact;
         }

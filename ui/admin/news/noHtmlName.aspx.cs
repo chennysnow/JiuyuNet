@@ -26,7 +26,7 @@ public partial class admin_news_noHtmlName : System.Web.UI.Page
     private void bin(string id)
     {
         //dal.news news = new dal.news();
-        MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+        dal.NewsDB news = new dal.NewsDB();
         mo.news model = news.getModel("where id=" + id);
         txtName.Text = model.nameC;
         txtTitle.Text = model.titleC;
@@ -42,7 +42,7 @@ public partial class admin_news_noHtmlName : System.Web.UI.Page
         try
         {
             //dal.news news = new dal.news();
-            MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+            dal.NewsDB news = new dal.NewsDB();
             mo.news model = news.getModel("where id="+ViewState["id"].ToString());
             model.nameC = txtName.Text;
             model.titleC = txtTitle.Text;

@@ -52,7 +52,7 @@ public class Ajax_web : IHttpHandler {
     private void ProMenuCount()
     {
         //dal.menu menu = new dal.menu();
-        MySqlDal.MenuDB menu = new MySqlDal.MenuDB();
+        dal.MenuDB menu = new dal.MenuDB();
         string count = menu.getString("count(*)", "where typ=1");
         context.Response.Write(count);
         context.Response.End();
@@ -60,7 +60,7 @@ public class Ajax_web : IHttpHandler {
     private void NewMenuCount()
     {
         //dal.menu menu = new dal.menu();
-        MySqlDal.MenuDB menu = new MySqlDal.MenuDB();
+        dal.MenuDB menu = new dal.MenuDB();
         string count = menu.getString("count(*)", "where typ=2");
         context.Response.Write(count);
         context.Response.End();
@@ -68,10 +68,10 @@ public class Ajax_web : IHttpHandler {
     private void CreatNewList(int menuCount)
     {
         //dal.menu menu = new dal.menu();
-        MySqlDal.MenuDB menu = new MySqlDal.MenuDB();
+        dal.MenuDB menu = new dal.MenuDB();
         List<mo.menu> modelList = menu.getModelListWhere("where typ=2");
         //dal.news news = new dal.news();
-        MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+        dal.NewsDB news = new dal.NewsDB();
         List<mo.news> modelNews = news.getModelListWhere("", "and typ=" + modelList[menuCount].id);
         int pageSize = op.staValue.newsSize;
         int pageCount = 1;
@@ -101,10 +101,10 @@ public class Ajax_web : IHttpHandler {
     private void CreatProList(int menuCount)
     {
         //dal.menu menu = new dal.menu();
-        MySqlDal.MenuDB menu = new MySqlDal.MenuDB();
+        dal.MenuDB menu = new dal.MenuDB();
         List<mo.menu> modelList = menu.getModelListWhere("where typ=1");
         //dal.products pro = new dal.products();
-        MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+        dal.ProductsDB pro = new dal.ProductsDB();
         int pageSize = op.staValue.pageSize;
         int pageCount = 1;
         if (menuCount == 0)//在第一次调用时把products页面生成下

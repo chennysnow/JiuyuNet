@@ -18,9 +18,9 @@ using org.in2bits.MyXls;
 public partial class admin_product_list : System.Web.UI.Page
 {
     //dal.products pro = new dal.products();
-    MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+    dal.ProductsDB pro = new dal.ProductsDB();
     //public dal.menu menu = new dal.menu();
-    public MySqlDal.MenuDB menu = new MySqlDal.MenuDB();
+    public dal.MenuDB menu = new dal.MenuDB();
     public int index = 0, page = 0;
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -115,7 +115,7 @@ public partial class admin_product_list : System.Web.UI.Page
                 imgDel(id[i]);
                 pro.DelId(id[i]);
 
-                new MySqlDal.PriceDB().DelByproductId(int.Parse(id[i]));
+                new dal.PriceDB().DelByproductId(int.Parse(id[i]));
             }
             op.staValue.divAlert(this.Page, "删除成功");
             bin();
@@ -124,7 +124,7 @@ public partial class admin_product_list : System.Web.UI.Page
     private void DorBin(DropDownList dro)//
     {
         //dal.menu menu = new dal.menu();
-        MySqlDal.MenuDB menu = new MySqlDal.MenuDB();
+        dal.MenuDB menu = new dal.MenuDB();
         List<mo.menu> modelList = menu.getModelListWhere("where typ=1");
         for (int i = 0; i < modelList.Count; i++)
         {
@@ -142,7 +142,7 @@ public partial class admin_product_list : System.Web.UI.Page
     private void DorSon(int id, DropDownList dro)
     {
         //dal.menu menu = new dal.menu();
-        MySqlDal.MenuDB menu = new MySqlDal.MenuDB();
+        dal.MenuDB menu = new dal.MenuDB();
         List<mo.menu> modelList = menu.getModelListWhere("where typ=" + id);
         for (int i = 0; i < modelList.Count; i++)
         {
@@ -224,7 +224,7 @@ public partial class admin_product_list : System.Web.UI.Page
     private void imgDel(string id)
     {
         //dal.img img = new dal.img();
-        MySqlDal.imgDB img = new MySqlDal.imgDB();
+        dal.imgDB img = new dal.imgDB();
         string proMapPath = Server.MapPath("~/"), path = "";
         // mo.proInfo modelPro = pro.getModel("where id=" + id);
         List<mo.img> modelList = img.getModelListWhere("where typ=" + id);
@@ -306,7 +306,7 @@ public partial class admin_product_list : System.Web.UI.Page
 
     private void CreateExcel()
     {
-        MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+        dal.ProductsDB pro = new dal.ProductsDB();
         List<mo.proInfo> modelList = pro.getModelListAll_info();
 
         string pathTo = Server.MapPath("/") + "uploadFile/Report/Up/" + DateTime.Now.ToString("yyyyMMdd") + "/";
@@ -475,18 +475,18 @@ public partial class admin_product_list : System.Web.UI.Page
                 //上传文件
                 mo.imgC = upImg(zipPath + "/img/" + mo.imgC.Replace('/', '_'));
                 mo.id = new op.Operation().MaxId("products");
-                new MySqlDal.ProductsDB().InsertModel(mo);
+                new dal.ProductsDB().InsertModel(mo);
             }
             else
             {
 
-                mo.proInfo oldmo = new MySqlDal.ProductsDB().getModel("where id = " + mo.id);
+                mo.proInfo oldmo = new dal.ProductsDB().getModel("where id = " + mo.id);
                 if (oldmo.id <= 0)
                 {
                     //上传文件
                     mo.imgC = upImg(zipPath + "/img/" + mo.imgC.Replace('/', '_'));
                     mo.id = new op.Operation().MaxId("products");
-                    new MySqlDal.ProductsDB().InsertModel(mo);
+                    new dal.ProductsDB().InsertModel(mo);
                     return;
                 }
                 else
@@ -495,7 +495,7 @@ public partial class admin_product_list : System.Web.UI.Page
                     {
                         mo.imgC = upImg(zipPath + "/img/" + mo.imgC.Replace('/', '_'));
                     }
-                    new MySqlDal.ProductsDB().UpdateModel(mo);
+                    new dal.ProductsDB().UpdateModel(mo);
                 }
 
 

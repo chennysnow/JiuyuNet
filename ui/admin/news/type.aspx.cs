@@ -12,7 +12,7 @@ using System.Collections.Generic;
 public partial class admin_news_type : System.Web.UI.Page
 {
     //dal.menu menu = new dal.menu();
-    MySqlDal.MenuDB menu = new MySqlDal.MenuDB();
+    dal.MenuDB menu = new dal.MenuDB();
     setWeb set = new setWeb();
     protected void Page_Load(object sender, EventArgs e)
     {

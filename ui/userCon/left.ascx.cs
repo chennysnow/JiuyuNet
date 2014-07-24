@@ -13,25 +13,25 @@ public partial class userCon_left : System.Web.UI.UserControl
         if (!IsPostBack)
         {
             //dal.brand brand = new dal.brand();
-            MySqlDal.BrandDB brand = new MySqlDal.BrandDB();
+            dal.BrandDB brand = new dal.BrandDB();
             List<mo.brand> modelBrand = brand.getModelListAll();
             repBrand.DataSource = modelBrand;
             repBrand.DataBind();
 
             //dal.order order = new dal.order();
-            MySqlDal.OrderDB order = new MySqlDal.OrderDB();
+            dal.OrderDB order = new dal.OrderDB();
             List<mo.order> modelOrder = order.getModelListWhere("");
             repOrder.DataSource = modelOrder;
             repOrder.DataBind();
 
             //dal.flash flash = new dal.flash();
-            MySqlDal.FlashDB flash = new MySqlDal.FlashDB();
+            dal.FlashDB flash = new dal.FlashDB();
             List<mo.flash> modelFlash = flash.getModelListWhere("where typS='file'");
             repDownload.DataSource = modelFlash;
             repDownload.DataBind();
 
             //dal.news news = new dal.news();
-            MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+            dal.NewsDB news = new dal.NewsDB();
             List<mo.news> modelNews = news.getModelListWhere("and typ=6");
             repFaq.DataSource = modelNews;
             repFaq.DataBind();

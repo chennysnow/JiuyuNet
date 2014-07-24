@@ -9,7 +9,7 @@ public partial class admin_supply_edit : System.Web.UI.Page
 {
     mo.supply model = new mo.supply();
     //dal.supply att = new dal.supply();
-    MySqlDal.SupplyDB att = new MySqlDal.SupplyDB();
+    dal.SupplyDB att = new dal.SupplyDB();
     List<mo.supplyvalue> modelList = new List<mo.supplyvalue>();
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -75,7 +75,7 @@ public partial class admin_supply_edit : System.Web.UI.Page
     private void attrBin()
     {
         //dal.supplyvalue attr = new dal.supplyvalue();
-        MySqlDal.SupplyvalueDB attr = new MySqlDal.SupplyvalueDB();
+        dal.SupplyvalueDB attr = new dal.SupplyvalueDB();
         modelList = attr.getModelListAll();
         repAttr.DataSource = modelList;
         repAttr.DataBind();

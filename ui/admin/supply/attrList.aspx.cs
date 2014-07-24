@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 public partial class admin_product_attrList : System.Web.UI.Page
 {
     //dal.supplyvalue attr = new dal.supplyvalue();
-    MySqlDal.SupplyvalueDB attr = new MySqlDal.SupplyvalueDB();
+    dal.SupplyvalueDB attr = new dal.SupplyvalueDB();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)

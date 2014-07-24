@@ -14,7 +14,7 @@ using System.Collections.Generic;
 public partial class admin_news_Search : System.Web.UI.Page
 {
     //dal.searchWords search = new dal.searchWords();
-    MySqlDal.SearchWordsDB search = new MySqlDal.SearchWordsDB();
+    dal.SearchWordsDB search = new dal.SearchWordsDB();
     protected void Page_Load(object sender, EventArgs e)
     {
         cook.Judge();

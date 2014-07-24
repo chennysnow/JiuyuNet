@@ -42,7 +42,7 @@ public partial class admin_product_add : System.Web.UI.Page
     private void attrBin()
     {
         //dal.attr attr = new dal.attr();
-        MySqlDal.attrDB attr = new MySqlDal.attrDB();
+        dal.attrDB attr = new dal.attrDB();
         List<mo.attr> modelList = attr.getModelListAll();
         repAttr.DataSource = modelList;
         repAttr.DataBind();
@@ -85,7 +85,7 @@ public partial class admin_product_add : System.Web.UI.Page
         try
         {
             //dal.products pro = new dal.products();
-            MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+            dal.ProductsDB pro = new dal.ProductsDB();
             mo.proInfo model = new mo.proInfo();
             op.Operation ope = new op.Operation();
             model.id = ope.MaxId("products");
@@ -157,7 +157,7 @@ public partial class admin_product_add : System.Web.UI.Page
     private void supplyBin()
     {
         //dal.supply att = new dal.supply();
-        MySqlDal.SupplyDB att = new MySqlDal.SupplyDB();
+        dal.SupplyDB att = new dal.SupplyDB();
         List<mo.supply> modelList = att.getModelListAll();
         //foreach (mo.supply model in modelList)
         //{
@@ -172,7 +172,7 @@ public partial class admin_product_add : System.Web.UI.Page
     private string getPrice(int id)
     {
         //dal.price price = new dal.price();
-        MySqlDal.PriceDB price = new MySqlDal.PriceDB();
+        dal.PriceDB price = new dal.PriceDB();
         mo.price model = new mo.price();
         try
         {

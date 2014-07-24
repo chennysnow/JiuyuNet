@@ -73,7 +73,7 @@ namespace op
         public static void setMeta(System.Web.UI.Page page,string typ)
         {
             //dal.keywords key = new dal.keywords();
-            MySqlDal.KeywordsDB key = new MySqlDal.KeywordsDB();
+            dal.KeywordsDB key = new dal.KeywordsDB();
             mo.keywords model = key.getModel(typ);
             System.Web.UI.HtmlControls.HtmlMeta meta = new System.Web.UI.HtmlControls.HtmlMeta();
             page.Title = model.titleC;
@@ -109,7 +109,7 @@ namespace op
         #endregion
         #region 菜单
         //dal.menu menu = new dal.menu();
-        MySqlDal.MenuDB menu = new MySqlDal.MenuDB();
+        dal.MenuDB menu = new dal.MenuDB();
         /// <summary>
         /// 缓存所有菜单  typ确定
         /// </summary>
@@ -143,7 +143,7 @@ namespace op
             //    sql = "where parent_id=" + typ;
             //}
 
-            //List<mo.menu> modelList_1 = new MySqlDal.menu().getModelListWhere(sql);
+            //List<mo.menu> modelList_1 = new dal.menu().getModelListWhere(sql);
 
            
             if (modelList_1.Count <= 0 || modelList_1 == null)

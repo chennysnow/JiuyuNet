@@ -26,7 +26,7 @@ public partial class admin_news_content : System.Web.UI.Page
     private void bin(string id)
     {
         //dal.news news = new dal.news();
-        MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+        dal.NewsDB news = new dal.NewsDB();
         mo.news model = news.getModel("where id=" + id);
         Master.title = model.nameC;
         txtContent.Text = model.contentC;
@@ -37,7 +37,7 @@ public partial class admin_news_content : System.Web.UI.Page
         try
         {
             //dal.news news = new dal.news();
-            MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+            dal.NewsDB news = new dal.NewsDB();
             news.UpdateString("contentC='"+txtContent.Text+"'", "where id=" + ViewState["id"].ToString());
             op.staValue.divAlert(this.Page, "修改成功!", "speList.aspx");
         }

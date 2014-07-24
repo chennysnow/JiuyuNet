@@ -13,7 +13,7 @@ public partial class userCon_contact : System.Web.UI.UserControl
         if (!IsPostBack)
         {
             //dal.news news = new dal.news();
-            MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+            dal.NewsDB news = new dal.NewsDB();
             string contact= news.getString("aboutC", "where typS='contact'");
             liContact.Text = ope.removeHtml(contact);
         }

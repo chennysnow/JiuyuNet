@@ -18,7 +18,7 @@ public partial class userCon_faq : System.Web.UI.UserControl
         if (!IsPostBack)
         {
             //dal.news news = new dal.news();
-            MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+            dal.NewsDB news = new dal.NewsDB();
             List<mo.news> modelList = news.getModelListWhere("where typ=3");
             System.Text.StringBuilder sb = new System.Text.StringBuilder();
             for (int i = 0; i < modelList.Count; i++)

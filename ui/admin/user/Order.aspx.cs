@@ -14,9 +14,9 @@ using System.Collections.Generic;
 public partial class admin_user_Order : System.Web.UI.Page
 {
     public op.staValue staValue = new op.staValue();
-    MySqlDal.UserDB user = new MySqlDal.UserDB();
+    dal.UserDB user = new dal.UserDB();
     //dal.order order = new dal.order();
-    MySqlDal.OrderDB order = new MySqlDal.OrderDB();
+    dal.OrderDB order = new dal.OrderDB();
     protected void Page_Load(object sender, EventArgs e)
     {
         Master.title = "订单信息管理";
@@ -99,7 +99,7 @@ public partial class admin_user_Order : System.Web.UI.Page
         if (!string.IsNullOrEmpty(str))
         {
             int cutFlg = 0;
-            MySqlDal.OrderItemDB itemdb = new MySqlDal.OrderItemDB();
+            dal.OrderItemDB itemdb = new dal.OrderItemDB();
             // 已付款
             if (dropEditOrder.SelectedValue != "0")
             {
@@ -124,7 +124,7 @@ public partial class admin_user_Order : System.Web.UI.Page
     {
         List<mo.order> modelList = order.getModelListWhere(" where orderC in(" + allId + ")");
         //dal.products pro = new dal.products();
-        MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+        dal.ProductsDB pro = new dal.ProductsDB();
         for (int i = 0; i < modelList.Count; i++)
         {
             if (modelList[i].curFlg==0)//判断是否已减过库存

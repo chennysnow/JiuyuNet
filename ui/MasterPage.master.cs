@@ -19,7 +19,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
             if (string.IsNullOrEmpty(topKey))
             {
                 //dal.link link = new dal.link();
-                MySqlDal.LinkDB link = new MySqlDal.LinkDB();
+                dal.LinkDB link = new dal.LinkDB();
                 List<mo.link> modelLink = link.getModelListWhere("where typS='top'");
                 System.Text.StringBuilder sb = new System.Text.StringBuilder();
                 for (int i = 0; i < modelLink.Count; i++)

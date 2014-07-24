@@ -90,7 +90,7 @@ namespace op
         public string MaxZiDuan(string tbName, string ziDuan)
         {
             //dal.products pro = new dal.products();
-            MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+            dal.ProductsDB pro = new dal.ProductsDB();
             System.Text.StringBuilder sb = new System.Text.StringBuilder();
             sb.AppendFormat("select max({0})+1 from {1}", ziDuan, tbName);
             string str = pro.maxId(sb.ToString());

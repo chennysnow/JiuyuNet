@@ -22,7 +22,7 @@ public partial class admin_KeyWords : System.Web.UI.Page
     private void bin()
     {
         //dal.keywords keyWords = new dal.keywords();
-        MySqlDal.KeywordsDB keyWords = new MySqlDal.KeywordsDB();
+        dal.KeywordsDB keyWords = new dal.KeywordsDB();
         List<mo.keywords> modelList = keyWords.getModelListAll();
         repList.DataSource = modelList;
         repList.DataBind();
@@ -32,7 +32,7 @@ public partial class admin_KeyWords : System.Web.UI.Page
     protected void btnOk_Click(object sender, EventArgs e)
     {
         //dal.keywords keyWords = new dal.keywords();
-        MySqlDal.KeywordsDB keyWords = new MySqlDal.KeywordsDB();
+        dal.KeywordsDB keyWords = new dal.KeywordsDB();
         string[] id = Request.Form.GetValues("id");
         string[] key = Request.Form.GetValues("keywordsC");
         string[] des = Request.Form.GetValues("descriptionC");

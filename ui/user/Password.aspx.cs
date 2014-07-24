@@ -14,7 +14,7 @@ public partial class user_Password : System.Web.UI.Page
     protected void btn_edit_password_Click(object sender, EventArgs e)
     {
         op.Operation ope = new op.Operation();
-        MySqlDal.UserDB user = new MySqlDal.UserDB();
+        dal.UserDB user = new dal.UserDB();
         op.tipsMessage tips = new op.tipsMessage();
         string passWord = ope.StrEncode(txtOldPass.Text), userName = cook.userJudge();
         string flg = user.getString("id", "where userName='" + userName + "' and passwordC='" + passWord + "'");

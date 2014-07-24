@@ -12,13 +12,13 @@ using System.Collections.Generic;
 public partial class _index : System.Web.UI.Page 
 {
     //dal.menu menu = new dal.menu();
-    MySqlDal.MenuDB menu = new MySqlDal.MenuDB();
+    dal.MenuDB menu = new dal.MenuDB();
     //dal.news news = new dal.news();
-    MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+    dal.NewsDB news = new dal.NewsDB();
     //dal.products pro = new dal.products();
-    MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+    dal.ProductsDB pro = new dal.ProductsDB();
     //dal.link links = new dal.link();
-    MySqlDal.LinkDB links = new MySqlDal.LinkDB();
+    dal.LinkDB links = new dal.LinkDB();
     public int index = 0;
     protected void Page_Load(object sender, EventArgs e)
     {

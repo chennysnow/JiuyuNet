@@ -15,7 +15,7 @@ public partial class ProShow : System.Web.UI.Page
     public mo.proInfo model = new mo.proInfo();
     public string Categroy = "";
     //dal.products pro = new dal.products();
-    MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+    dal.ProductsDB pro = new dal.ProductsDB();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -34,7 +34,7 @@ public partial class ProShow : System.Web.UI.Page
             sb.AppendFormat("<li><img src=\"{0}/sImg{1}\" /></li>", model.fileName, arrMoreImg[i]);
         }
         liMoreImg.Text = sb.ToString();
-        MySqlDal.MenuDB menu = new MySqlDal.MenuDB();
+        dal.MenuDB menu = new dal.MenuDB();
         Categroy = menu.getString("nameC", "where id=" + model.typ);
         op.staValue.setMeta(Page, model.titleC, model.keywordsC, model.descriptionC);
         liDescription.Text = model.contentC;
@@ -47,7 +47,7 @@ public partial class ProShow : System.Web.UI.Page
         //添加产品访问数
         if (Session["visitor"] == null || !Session["visitor"].ToString().Contains("_" + model.id.ToString() + "_"))
         {
-            MySqlDal.VisitorsReportDB db = new MySqlDal.VisitorsReportDB();
+            dal.VisitorsReportDB db = new dal.VisitorsReportDB();
             mo.VisitorsReport obj = new mo.VisitorsReport();
             obj.Createdate = DateTime.Now;
             obj.ProductID = model.id.ToString();
@@ -79,7 +79,7 @@ public partial class ProShow : System.Web.UI.Page
         if (!string.IsNullOrEmpty(attrId))
         {
             //dal.attr attr = new dal.attr();
-            MySqlDal.attrDB attr = new MySqlDal.attrDB();
+            dal.attrDB attr = new dal.attrDB();
             List<mo.attr> modelList = attr.getModelListWhere("where id in(" + attrId + ")");
             System.Text.StringBuilder sb = new System.Text.StringBuilder();
             List<string> value = attrValue.Split('@').ToList();
@@ -108,7 +108,7 @@ public partial class ProShow : System.Web.UI.Page
     private void binPrice(int typ)
     {
         //dal.price price = new dal.price();
-        MySqlDal.PriceDB price = new MySqlDal.PriceDB();
+        dal.PriceDB price = new dal.PriceDB();
         List<mo.price> modelList = price.getModelListWhere("where typ=" + typ);
         repPrice.DataSource = modelList;
         repPrice.DataBind();

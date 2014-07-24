@@ -15,7 +15,7 @@ using System.IO;
 public partial class admin_link : System.Web.UI.Page
 {
     //dal.link link = new dal.link();
-    MySqlDal.LinkDB link = new MySqlDal.LinkDB();
+    dal.LinkDB link = new dal.LinkDB();
     protected void Page_Load(object sender, EventArgs e)
     {
         Master.title = "链接管理";

@@ -19,7 +19,7 @@ public partial class order_box : System.Web.UI.Page
         if (Request.QueryString["size"] != null)
         {
             //dal.box box = new dal.box();
-            MySqlDal.BoxDB box = new MySqlDal.BoxDB();
+            dal.BoxDB box = new dal.BoxDB();
             List<mo.box> modelList = null;
             double size = 0;
             bool flg = double.TryParse(Request.QueryString["size"].ToString(), out size);

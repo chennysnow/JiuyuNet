@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 public partial class admin_supply_prosupply : System.Web.UI.Page
 {
     //dal.products att = new dal.products();
-    MySqlDal.ProductsDB att = new MySqlDal.ProductsDB();
+    dal.ProductsDB att = new dal.ProductsDB();
     protected void Page_Load(object sender, EventArgs e)
     {
       //  Master.title = "";
@@ -22,7 +22,7 @@ public partial class admin_supply_prosupply : System.Web.UI.Page
     private void dropBin()//只绑定 
     {
         //dal.supply att = new dal.supply();
-        MySqlDal.SupplyDB att = new MySqlDal.SupplyDB();
+        dal.SupplyDB att = new dal.SupplyDB();
         List<mo.supply> modelList = att.getModelListAll();
 
         foreach (mo.supply model in modelList)

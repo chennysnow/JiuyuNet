@@ -14,7 +14,7 @@ using System.Collections.Generic;
 public partial class admin_flash : System.Web.UI.Page
 {
     //dal.flash flash = new dal.flash();
-    MySqlDal.FlashDB flash = new MySqlDal.FlashDB();
+    dal.FlashDB flash = new dal.FlashDB();
     protected void Page_Load(object sender, EventArgs e)
     {
         Master.title = "图片切换";

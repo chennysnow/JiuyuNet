@@ -18,7 +18,7 @@ public partial class userCon_leftImg : System.Web.UI.UserControl
         if (!IsPostBack)
         {
             //dal.flash flash = new dal.flash();
-            MySqlDal.FlashDB flash = new MySqlDal.FlashDB();
+            dal.FlashDB flash = new dal.FlashDB();
             List<mo.flash> modelList = flash.getModelListWhere("where typS='left'");
             System.Text.StringBuilder sb = new System.Text.StringBuilder();
             for (int i = 0; i < modelList.Count; i++)

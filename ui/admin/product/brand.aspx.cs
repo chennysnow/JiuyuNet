@@ -14,7 +14,7 @@ using System.Collections.Generic;
 public partial class admin_product_brand : System.Web.UI.Page
 {
     //dal.brand brand = new dal.brand();
-    MySqlDal.BrandDB brand = new MySqlDal.BrandDB();
+    dal.BrandDB brand = new dal.BrandDB();
     protected void Page_Load(object sender, EventArgs e)
     {
         Master.title = "品牌管理";

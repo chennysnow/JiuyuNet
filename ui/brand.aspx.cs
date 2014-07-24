@@ -12,7 +12,7 @@ public partial class brand : System.Web.UI.Page
         if (!IsPostBack)
         {
             //dal.brand brand = new dal.brand();
-            MySqlDal.BrandDB brand = new MySqlDal.BrandDB();
+            dal.BrandDB brand = new dal.BrandDB();
             List<mo.brand> modelList = brand.getModelListAll();
             repList.DataSource = modelList;
             repList.DataBind();

@@ -66,7 +66,7 @@ public partial class admin_seo_filterKey : System.Web.UI.Page
     private void newsRun(int typ)
     {
         //dal.news news = new dal.news();
-        MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+        dal.NewsDB news = new dal.NewsDB();
         List<mo.news> modelList = news.getModelListWhere("where typS='0'");
         switch (typ)
         {
@@ -92,7 +92,7 @@ public partial class admin_seo_filterKey : System.Web.UI.Page
     private void proRun(int typ)
     {
         //dal.products pro = new dal.products();
-        MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+        dal.ProductsDB pro = new dal.ProductsDB();
         System.Data.DataTable dt = pro.getTable("select preId,contentC,keywordsC  from proInfo");
         switch (typ)
         {

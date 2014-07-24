@@ -18,7 +18,7 @@ public partial class userCon_ProDisplay : System.Web.UI.UserControl
         if (!IsPostBack)
         {
             //dal.products pro = new dal.products();
-            MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+            dal.ProductsDB pro = new dal.ProductsDB();
             List<mo.products> modelList = pro.getModelListWhere("top 8", "where displayC like '%,1,%' and typ=" + typ);
             repProDisplay.DataSource = modelList;
             repProDisplay.DataBind();

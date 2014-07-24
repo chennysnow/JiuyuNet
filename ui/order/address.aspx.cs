@@ -15,7 +15,7 @@ public partial class address : System.Web.UI.Page
         {
             if (Request.Cookies["userName"] != null)
             {
-                MySqlDal.UserDB user = new MySqlDal.UserDB();
+                dal.UserDB user = new dal.UserDB();
                 model = user.getModel("where userName='" + Request.Cookies["userName"].Value + "'");
                 flg = 1;
             }
@@ -35,7 +35,7 @@ public partial class address : System.Web.UI.Page
     private void binPlace()
     {
         //dal.place place = new dal.place();
-        MySqlDal.PlaceDB place = new MySqlDal.PlaceDB();
+        dal.PlaceDB place = new dal.PlaceDB();
         List<mo.place> modelList = place.getModelListAll();
         repPlace.DataSource = modelList;
         repPlace.DataBind();
@@ -43,7 +43,7 @@ public partial class address : System.Web.UI.Page
     private void binExpress()
     {
         //dal.expPay expPay = new dal.expPay();
-        MySqlDal.expPayDB expPay = new MySqlDal.expPayDB();
+        dal.expPayDB expPay = new dal.expPayDB();
         List<mo.expPay> modelList = expPay.getModelListWhere("where typ=0");
         string ids = "";
         for (int i = 0; i < modelList.Count; i++)

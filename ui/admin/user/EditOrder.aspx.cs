@@ -29,7 +29,7 @@ public partial class admin_user_EditOrder : System.Web.UI.Page
             string id = Request.Params["id"].ToString();
             op.staValue staValue = new op.staValue();
             //dal.order order = new dal.order();
-            MySqlDal.OrderDB order = new MySqlDal.OrderDB();
+            dal.OrderDB order = new dal.OrderDB();
             mo.order model = order.getModel("where orderC='" + id+"'");
             //liAddInfo.Text = model.addInfo;
  
@@ -54,7 +54,7 @@ public partial class admin_user_EditOrder : System.Web.UI.Page
             ViewState["id"] = id;
 
             //List<mo.OrderItem> items = new dal.OrderItem().getModelListWhere("where OrderID='" + model.orderC + "'");
-            List<mo.OrderItem> items = new MySqlDal.OrderItemDB().getModelListWhere("where OrderID='" + model.orderC + "'");
+            List<mo.OrderItem> items = new dal.OrderItemDB().getModelListWhere("where OrderID='" + model.orderC + "'");
             repOrderItem.DataSource = items;
             repOrderItem.DataBind();
 
@@ -74,7 +74,7 @@ public partial class admin_user_EditOrder : System.Web.UI.Page
         try
         {
             //dal.order order = new dal.order();
-            MySqlDal.OrderDB order = new MySqlDal.OrderDB();
+            dal.OrderDB order = new dal.OrderDB();
             mo.order model = order.getModel("where orderC='" + ViewState["id"].ToString() + "'");
             op.Operation ope = new op.Operation();
             model.expTime = txtPostTime.Text;
@@ -93,7 +93,7 @@ public partial class admin_user_EditOrder : System.Web.UI.Page
             // 修改订单商品信息
 
             //List<mo.OrderItem> items = new dal.OrderItem().getModelListWhere("where OrderID='" + model.orderC + "'");
-            List<mo.OrderItem> items = new MySqlDal.OrderItemDB().getModelListWhere("where OrderID='" + model.orderC + "'");
+            List<mo.OrderItem> items = new dal.OrderItemDB().getModelListWhere("where OrderID='" + model.orderC + "'");
             string[] unitPrice = Request.Form.GetValues("DiscountPrice");
             string[] unitQunary = Request.Form.GetValues("ProQuantity");
 
@@ -104,7 +104,7 @@ public partial class admin_user_EditOrder : System.Web.UI.Page
                     double totalAmount = double.Parse(unitPrice[i]) * double.Parse(unitQunary[i]);
 
                     //new dal.OrderItem().UpdateString("DisPrice=" + unitPrice[i] + ",Quantity=" + unitQunary[i] + ",TotalAmount=" + totalAmount, "where id = " + items[i].ID);
-                    new MySqlDal.OrderItemDB().UpdateString("DisPrice=" + unitPrice[i] + ",Quantity=" + unitQunary[i] + ",TotalAmount=" + totalAmount, "where id = " + items[i].ID);
+                    new dal.OrderItemDB().UpdateString("DisPrice=" + unitPrice[i] + ",Quantity=" + unitQunary[i] + ",TotalAmount=" + totalAmount, "where id = " + items[i].ID);
                 }
             }
 
@@ -128,11 +128,11 @@ public partial class admin_user_EditOrder : System.Web.UI.Page
     public void cutCount(string orderC)
     {
         //dal.order order = new dal.order();
-        MySqlDal.OrderDB order = new MySqlDal.OrderDB();
-        MySqlDal.UserDB user = new MySqlDal.UserDB();
+        dal.OrderDB order = new dal.OrderDB();
+        dal.UserDB user = new dal.UserDB();
         mo.order model = order.getModel(" where orderC='" + orderC + "'");
         //dal.products pro = new dal.products();
-        MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+        dal.ProductsDB pro = new dal.ProductsDB();
         if (model.curFlg == 0)//判断是否已减过库存
         {
             string[] proId = model.cutCount.Split('@');

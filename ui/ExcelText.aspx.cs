@@ -24,7 +24,7 @@ public partial class ExcelText : System.Web.UI.Page
 
     private void CreateExcel()
     {
-        MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+        dal.ProductsDB pro = new dal.ProductsDB();
         List<mo.proInfo> modelList = pro.getModelListAll_info();
 
         string pathTo = Server.MapPath("/") + "uploadFile/Report/Up/" + DateTime.Now.ToString("yyyyMMdd") + "/";
@@ -193,18 +193,18 @@ public partial class ExcelText : System.Web.UI.Page
                 //上传文件
                 mo.imgC = upImg(zipPath + "/img/" + mo.imgC.Replace('/', '_'));
                 mo.id = new op.Operation().MaxId("products");
-                new MySqlDal.ProductsDB().InsertModel(mo);
+                new dal.ProductsDB().InsertModel(mo);
             }
             else
             {
 
-                mo.proInfo oldmo = new MySqlDal.ProductsDB().getModel("where id = " + mo.id);
+                mo.proInfo oldmo = new dal.ProductsDB().getModel("where id = " + mo.id);
                 if (oldmo.id <= 0)
                 {
                     //上传文件
                     mo.imgC = upImg(zipPath + "/img/" + mo.imgC.Replace('/', '_'));
                     mo.id = new op.Operation().MaxId("products");
-                    new MySqlDal.ProductsDB().InsertModel(mo);
+                    new dal.ProductsDB().InsertModel(mo);
                     return;
                 }
                 else
@@ -213,7 +213,7 @@ public partial class ExcelText : System.Web.UI.Page
                     {
                         mo.imgC = upImg(zipPath + "/img/" + mo.imgC.Replace('/', '_'));
                     }
-                    new MySqlDal.ProductsDB().UpdateModel(mo);
+                    new dal.ProductsDB().UpdateModel(mo);
                 }
 
 
@@ -302,7 +302,7 @@ public partial class ExcelText : System.Web.UI.Page
     //            mo.imgC = upImg(zipPath + "/img/" + mo.imgC.Replace('/', '_'));
 
     //            mo.id = new op.Operation().MaxId("products");
-    //            new MySqlDal.ProductsDB().InsertModel(mo);
+    //            new dal.ProductsDB().InsertModel(mo);
 
 
 
@@ -310,13 +310,13 @@ public partial class ExcelText : System.Web.UI.Page
     //        else
     //        {
 
-    //            mo.proInfo oldmo = new MySqlDal.ProductsDB().getModel("where id = "+mo.id);
+    //            mo.proInfo oldmo = new dal.ProductsDB().getModel("where id = "+mo.id);
     //            if (oldmo.id <= 0)
     //            {
     //                //上传文件
     //                mo.imgC = upImg(zipPath + "/img/" + mo.imgC.Replace('/', '_'));
     //                mo.id = new op.Operation().MaxId("products");
-    //                new MySqlDal.ProductsDB().InsertModel(mo);
+    //                new dal.ProductsDB().InsertModel(mo);
     //                return;
     //            }
     //            else
@@ -325,7 +325,7 @@ public partial class ExcelText : System.Web.UI.Page
     //                {
     //                    mo.imgC = upImg(zipPath + "/img/" + mo.imgC.Replace('/', '_'));
     //                }
-    //                new MySqlDal.ProductsDB().UpdateModel(mo);
+    //                new dal.ProductsDB().UpdateModel(mo);
     //            }
 
 
@@ -389,7 +389,7 @@ public partial class ExcelText : System.Web.UI.Page
 
     //    //可以直接取图片的地址
 
-    //    MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+    //    dal.ProductsDB pro = new dal.ProductsDB();
     //    List<mo.proInfo> modelList = pro.getModelListAll_info();
 
     //    int rowIndex = 1;

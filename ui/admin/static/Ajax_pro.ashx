@@ -9,7 +9,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 public class Ajax_pro : IHttpHandler {
     setWeb sw = new setWeb();
     //dal.products pro = new dal.products();
-    MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+    dal.ProductsDB pro = new dal.ProductsDB();
     HttpContext context = null;
     public void ProcessRequest(HttpContext context1)
     {
@@ -29,7 +29,7 @@ public class Ajax_pro : IHttpHandler {
     private void proCount()
     {
         //dal.products pro = new dal.products();
-        MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+        dal.ProductsDB pro = new dal.ProductsDB();
         string count = pro.getString("count(*)", "");
         context.Response.Write(count);
         context.Response.End();

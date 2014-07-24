@@ -13,7 +13,7 @@ public partial class userCon_hotPro : System.Web.UI.UserControl
         if (!IsPostBack)
         {
             //dal.products pro = new dal.products();
-            MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+            dal.ProductsDB pro = new dal.ProductsDB();
             List<mo.products> modelList = pro.getModelListWhere("top 5","and displayC like '%,2,%'");
             repList.DataSource = modelList;
             repList.DataBind();

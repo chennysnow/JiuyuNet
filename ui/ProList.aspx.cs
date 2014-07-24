@@ -25,7 +25,7 @@ public partial class ProList : System.Web.UI.Page
         try
         {
             //dal.menu menu = new dal.menu();
-            MySqlDal.MenuDB menu = new MySqlDal.MenuDB();
+            dal.MenuDB menu = new dal.MenuDB();
             int typ = op.staValue.RequestInt(Request.Params["typ"]);
             display = Request.Params["display"];
             string flg="";
@@ -71,7 +71,7 @@ public partial class ProList : System.Web.UI.Page
             this.AspNetPager1.UrlRewritePattern = "proList.html?flg=" + flg + "&p={0}&typ=" + typ + "";
             this.AspNetPager1.EnableUrlRewriting = true;
             //dal.products pro = new dal.products();
-            MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+            dal.ProductsDB pro = new dal.ProductsDB();
             List<mo.products> listModel = pro.getModelListWhere(sb.ToString());//不显示FLASH产品 displayindex<>2 and 
             PagedDataSource pds = new PagedDataSource();
             pds.AllowPaging = true;

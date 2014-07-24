@@ -12,7 +12,7 @@ public partial class userCon_Recommendation : System.Web.UI.UserControl
         if (!IsPostBack)
         {
             //dal.products pro = new dal.products();
-            MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+            dal.ProductsDB pro = new dal.ProductsDB();
             List<mo.products> modelList = pro.getModelListWhere("where displayC like '%,3,%'");
             repList.DataSource = modelList;
             repList.DataBind();

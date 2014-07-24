@@ -20,7 +20,7 @@ public partial class userCon_flash : System.Web.UI.UserControl
         if (!IsPostBack)
         {
             //dal.flash flash = new dal.flash();
-            MySqlDal.FlashDB flash = new MySqlDal.FlashDB();
+            dal.FlashDB flash = new dal.FlashDB();
             modelList = flash.getModelListWhere("where typS='flash'");//读取6张图片的信息
             if (modelList == null || modelList.Count == 0)
                 return;

@@ -14,9 +14,9 @@ public class upload : IHttpHandler
             HttpPostedFile file;
             op.Operation ope = new op.Operation();
             //dal.price pri = new dal.price();
-            MySqlDal.PriceDB pri = new MySqlDal.PriceDB();
+            dal.PriceDB pri = new dal.PriceDB();
             //dal.products product = new dal.products();
-            MySqlDal.ProductsDB product = new MySqlDal.ProductsDB();
+            dal.ProductsDB product = new dal.ProductsDB();
             mo.proInfo model = product.getModel_s("select top 1 * from products,proInfo order by sortC asc");
             string cateId = context.Request["cateId"].ToString();
             string shui = context.Request["shui"].ToString();

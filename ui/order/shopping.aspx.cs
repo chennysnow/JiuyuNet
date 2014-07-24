@@ -35,10 +35,10 @@ public partial class shopping : System.Web.UI.Page
                         if (allId != "")
                         {
                             //dal.products pro = new dal.products();
-                            MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+                            dal.ProductsDB pro = new dal.ProductsDB();
                             modelList = pro.getModelListWhere("and id in(" + allId.TrimEnd(',') + ")");
                             //dal.price pri = new dal.price();
-                            MySqlDal.PriceDB pri = new MySqlDal.PriceDB();
+                            dal.PriceDB pri = new dal.PriceDB();
                             for (int i = 0; i < modelList.Count; i++)
                             {
                                 modelList[i].displayC = allCount["" + modelList[i].id + ""].ToString();//displayC 存数量

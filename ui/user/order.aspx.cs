@@ -9,7 +9,7 @@ public partial class user_order : System.Web.UI.Page
 {
     public op.staValue staValue = new op.staValue();
     //dal.order order = new dal.order();
-    MySqlDal.OrderDB order = new MySqlDal.OrderDB();
+    dal.OrderDB order = new dal.OrderDB();
     protected void Page_Load(object sender, EventArgs e)
     {
         cook.userJudge();
@@ -80,7 +80,7 @@ public partial class user_order : System.Web.UI.Page
             litEmail.Text = model.userName;
 
             //List<mo.OrderItem> items = new dal.OrderItem().getModelListWhere("where OrderID='" + model.orderC + "'");
-            List<mo.OrderItem> items = new MySqlDal.OrderItemDB().getModelListWhere("where OrderID='" + model.orderC + "'");
+            List<mo.OrderItem> items = new dal.OrderItemDB().getModelListWhere("where OrderID='" + model.orderC + "'");
 
             repOrderItem.DataSource = items;
             repOrderItem.DataBind();

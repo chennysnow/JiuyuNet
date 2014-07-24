@@ -14,7 +14,7 @@ public partial class Success : System.Web.UI.Page
             string order = Request.QueryString["order"];
             string userName = Request.QueryString["name"];
             System.Text.StringBuilder sb = new System.Text.StringBuilder();
-            MySqlDal.UserDB user = new MySqlDal.UserDB();
+            dal.UserDB user = new dal.UserDB();
             op.Operation ope=new op.Operation();
             userName = ope.StrEncode(userName);
             string id = user.getString("id", "where userName='" + userName + "'");

@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 public partial class admin_product_attrList : System.Web.UI.Page
 {
     //dal.attr attr = new dal.attr();
-    MySqlDal.attrDB attr = new MySqlDal.attrDB();
+    dal.attrDB attr = new dal.attrDB();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -51,7 +51,7 @@ public partial class admin_product_attrList : System.Web.UI.Page
             id = "," + id + ",";
             bool flg = true;
             //dal.products pro = new dal.products();
-            MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+            dal.ProductsDB pro = new dal.ProductsDB();
             System.Data.DataTable dt = pro.getTable("select attrId,attrValue,preId from proInfo where attrId<>'0'");
             for (int i = 0; i < dt.Rows.Count; i++)
             {

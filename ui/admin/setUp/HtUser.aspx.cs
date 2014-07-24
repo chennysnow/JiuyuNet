@@ -22,7 +22,7 @@ public partial class admin_HtUser : System.Web.UI.Page
     protected void Button1_Click(object sender, EventArgs e)
     {
         //dal.adminUser adminUser = new dal.adminUser();
-        MySqlDal.adminUserDB adminUser = new MySqlDal.adminUserDB();
+        dal.adminUserDB adminUser = new dal.adminUserDB();
         mo.adminUser model = adminUser.getModel("where userName='admin'");
         if (txtPassword.Text == model.passwordC)
         {

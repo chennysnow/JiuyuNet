@@ -18,14 +18,14 @@ public partial class User : System.Web.UI.Page
         cook.userJudge();
         if (!IsPostBack)
         {
-            MySqlDal.UserDB user = new MySqlDal.UserDB();
+            dal.UserDB user = new dal.UserDB();
             mo.user model = user.getModel("where userName='" + cook.userJudge() + "'");
             txtName.Text = model.nameC == "0" ? "" : model.nameC;
             txtTel.Text = model.telC=="0"?"":model.telC;
             txtAdd.Text = model.addressC=="0"?"":model.addressC;
             ViewState["id"] = model.id;
             //dal.place place = new dal.place();
-            MySqlDal.PlaceDB place = new MySqlDal.PlaceDB();
+            dal.PlaceDB place = new dal.PlaceDB();
             dropCountry.Items.Add(new ListItem("Please select","0"));
             List<mo.place> modelList = place.getModelListAll();
             foreach (mo.place mo in modelList)
@@ -46,7 +46,7 @@ public partial class User : System.Web.UI.Page
     protected void btn_userInfo_ok_Click(object sender, EventArgs e)
     {
         mo.user model = new mo.user();
-        MySqlDal.UserDB user = new MySqlDal.UserDB();
+        dal.UserDB user = new dal.UserDB();
         op.Operation ope = new op.Operation();
         model = user.getModel("where id=" + ViewState["id"].ToString());
         model.nameC = ope.StrEncode(txtName.Text);

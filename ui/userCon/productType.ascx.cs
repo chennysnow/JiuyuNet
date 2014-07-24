@@ -12,7 +12,7 @@ using System.Collections.Generic;
 public partial class userCon_productType : System.Web.UI.UserControl
 {
     //dal.menu menu = new dal.menu();
-    MySqlDal.MenuDB menu = new MySqlDal.MenuDB();
+    dal.MenuDB menu = new dal.MenuDB();
     //string htmlName = "";
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -45,7 +45,7 @@ public partial class userCon_productType : System.Web.UI.UserControl
     private void childMenu(System.Text.StringBuilder sb, int id)
     {
        List<mo.menu> listMenu = menu.getModelListWhere("where typ=" + id);
-       //List<mo.menu> listMenu = new MySqlDal.menu().getModelListWhere("where parent_id =" + id);
+       //List<mo.menu> listMenu = new dal.menu().getModelListWhere("where parent_id =" + id);
         if (listMenu.Count <= 0)
             return;
         else

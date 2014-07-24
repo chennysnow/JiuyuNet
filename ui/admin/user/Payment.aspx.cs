@@ -14,7 +14,7 @@ using System.Collections.Generic;
 public partial class admin_user_Payment : System.Web.UI.Page
 {
     //dal.expPay expPay = new dal.expPay();
-    MySqlDal.expPayDB expPay = new MySqlDal.expPayDB();
+    dal.expPayDB expPay = new dal.expPayDB();
     protected void Page_Load(object sender, EventArgs e)
     {
         Master.title = "支付管理";

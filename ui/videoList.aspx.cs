@@ -13,13 +13,13 @@ public partial class videoList : System.Web.UI.Page
         if (!IsPostBack)
         {
             //dal.products pro = new dal.products();
-            MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+            dal.ProductsDB pro = new dal.ProductsDB();
             List<mo.products> modelList = pro.getModelListWhere("top 15", "");
             repLeftMenu.DataSource = modelList;
             repLeftMenu.DataBind();
 
             //dal.link link = new dal.link();
-            MySqlDal.LinkDB link = new MySqlDal.LinkDB();
+            dal.LinkDB link = new dal.LinkDB();
             List<mo.link> modelLink = link.getModelListWhere("where typS='video'");
             repVideoList.DataSource = modelLink;
             repVideoList.DataBind();

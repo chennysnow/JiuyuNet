@@ -14,7 +14,7 @@ public partial class userCon_bestSale : System.Web.UI.UserControl
         if (!IsPostBack)
         {
             //dal.products pro = new dal.products();
-            MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+            dal.ProductsDB pro = new dal.ProductsDB();
             string where = "";
             if (typ != 0)
             {

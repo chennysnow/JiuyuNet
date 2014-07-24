@@ -18,7 +18,7 @@ public partial class Message : System.Web.UI.Page
             email.Value = Request.QueryString["mail"];
             op.staValue.setMeta(Page, "message");
             //dal.news news = new dal.news();
-            MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+            dal.NewsDB news = new dal.NewsDB();
             liContact.Text = news.getString("contentC", "where typS='contact'");
         }
     }
@@ -53,7 +53,7 @@ public partial class Message : System.Web.UI.Page
         try
         {
             //dal.message message = new dal.message();
-            MySqlDal.MessageDB message = new MySqlDal.MessageDB();
+            dal.MessageDB message = new dal.MessageDB();
             mo.message model = new mo.message();
             model.nameC = Request.Form["lname"] + " " + Request.Form["fname"] + " " + Request.Form["gender"];
             model.addressC = Request.Form["country"];

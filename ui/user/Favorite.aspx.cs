@@ -21,7 +21,7 @@ public partial class user_Favorite : System.Web.UI.Page
                     {
                         cartInfo = op.staValue.RexSpecial(cartInfo, ",");
                         //dal.products pro = new dal.products();
-                        MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+                        dal.ProductsDB pro = new dal.ProductsDB();
                         List<mo.products> modelList = pro.getModelListWhere("top 20", "where id in(" + cartInfo + ")");
                         repFavorite.DataSource = modelList;
                         repFavorite.DataBind();

@@ -15,7 +15,7 @@ public partial class admin_user_User : System.Web.UI.Page
 {
     //public dal.userLevelDb userLevel = new dal.userLevelDb();
    // dal.user user = new dal.user();
-    MySqlDal.UserDB user = new MySqlDal.UserDB();
+    dal.UserDB user = new dal.UserDB();
     protected void Page_Load(object sender, EventArgs e)
     {
         Master.title = "用户信息管理";

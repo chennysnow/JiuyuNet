@@ -15,9 +15,9 @@ using org.jiuyu.express;
 public partial class admin_user_post : System.Web.UI.Page
 {
     //dal.expPay expPay = new dal.expPay();
-    MySqlDal.expPayDB expPay = new MySqlDal.expPayDB();
+    dal.expPayDB expPay = new dal.expPayDB();
    // dal.expPlace expPlace = new dal.expPlace();
-    MySqlDal.expPlaceDB expPlace = new MySqlDal.expPlaceDB();
+    dal.expPlaceDB expPlace = new dal.expPlaceDB();
 
     //static List<mo.expPay> userfulExpress;
     protected void Page_Load(object sender, EventArgs e)
@@ -54,7 +54,7 @@ public partial class admin_user_post : System.Web.UI.Page
     {
         List<mo.expPlace> modelList = expPlace.getModelListWhere("where typ="+id);
         //dal.place place = new dal.place();
-        MySqlDal.PlaceDB place = new MySqlDal.PlaceDB();
+        dal.PlaceDB place = new dal.PlaceDB();
         for (int i = 0; i < modelList.Count; i++)
         {
             modelList[i].nameC = place.getString("nameC", "where id=" + modelList[i].placeId);
@@ -65,7 +65,7 @@ public partial class admin_user_post : System.Web.UI.Page
      private void repPlaceBin()
         {
             //dal.place place = new dal.place();
-            MySqlDal.PlaceDB place = new MySqlDal.PlaceDB();
+            dal.PlaceDB place = new dal.PlaceDB();
             List<mo.place> modelList = place.getModelListAll();
             repPlace.DataSource = modelList;
             repPlace.DataBind();

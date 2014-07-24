@@ -16,7 +16,7 @@ public partial class admin_user_sendMail : System.Web.UI.Page
             if (!string.IsNullOrEmpty(proId))
             {
                 //dal.products pro = new dal.products();
-                MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+                dal.ProductsDB pro = new dal.ProductsDB();
                 List<mo.products> modelList = pro.getModelListWhere("and id in(" + proId.TrimEnd(',') + ")");
                 repProDisplay.DataSource = modelList;
                 repProDisplay.DataBind();
@@ -24,7 +24,7 @@ public partial class admin_user_sendMail : System.Web.UI.Page
             txtRecipient.Text = Request.QueryString["mail"];
             txtCompanyName.Text = op.staValue.companyName;
 
-            MySqlDal.UserDB user = new MySqlDal.UserDB();
+            dal.UserDB user = new dal.UserDB();
             List<mo.user> userList = user.getModelListWhere("");
             Repeater1.DataSource = userList;
             Repeater1.DataBind();

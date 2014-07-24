@@ -18,7 +18,7 @@ public partial class userCon_hotSearch : System.Web.UI.UserControl
         if (!IsPostBack)
         {
             //dal.searchWords search = new dal.searchWords();
-            MySqlDal.SearchWordsDB search = new MySqlDal.SearchWordsDB();
+            dal.SearchWordsDB search = new dal.SearchWordsDB();
             List<mo.searchWords> modelList = search.getModelListAll();
             System.Text.StringBuilder sb = new System.Text.StringBuilder();
             for (int i = 0; i < modelList.Count; i++)

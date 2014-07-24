@@ -12,7 +12,7 @@ public partial class userCon_indexFlash : System.Web.UI.UserControl
         if (!IsPostBack)
         {
             //dal.flash flash = new dal.flash();
-            MySqlDal.FlashDB flash = new MySqlDal.FlashDB();
+            dal.FlashDB flash = new dal.FlashDB();
             List<mo.flash> modelList = flash.getModelListWhere("where typS='indexImg'");//读取6张图片的信息
             repFlash.DataSource = modelList;
             repFlash.DataBind();

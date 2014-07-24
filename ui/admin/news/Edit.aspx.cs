@@ -12,7 +12,7 @@ using System.Collections.Generic;
 public partial class admin_news_Edit : System.Web.UI.Page
 {
     //dal.menu menu = new dal.menu();
-    MySqlDal.MenuDB menu = new MySqlDal.MenuDB();
+    dal.MenuDB menu = new dal.MenuDB();
     protected void Page_Load(object sender, EventArgs e)
     {
         Master.title = "文章修改";
@@ -29,7 +29,7 @@ public partial class admin_news_Edit : System.Web.UI.Page
     private void bin(string id)
     {
         //dal.news news = new dal.news();
-        MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+        dal.NewsDB news = new dal.NewsDB();
         mo.news model = news.getModel("where id=" + id);
         txtName.Text = model.nameC;
         txtTitle.Text = model.titleC;
@@ -81,7 +81,7 @@ public partial class admin_news_Edit : System.Web.UI.Page
                 model.htmlName = op.staValue.RexSpecial(txtHtmlName.Text,"-") + ".html";
             }
             //dal.news news = new dal.news();
-            MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+            dal.NewsDB news = new dal.NewsDB();
             news.UpdateModel(model);
             op.staValue.divAlert(this.Page, "修改成功!", "list.aspx");
         }

@@ -21,7 +21,7 @@ public partial class ContactUs : System.Web.UI.Page
     private void bin()
     {
         //dal.news news = new dal.news();
-        MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+        dal.NewsDB news = new dal.NewsDB();
         mo.news model = news.getModel("where typS='contact'");
         System.Text.StringBuilder sb = new System.Text.StringBuilder();
         sb.AppendFormat("<dt>{0}</dt>",model.nameC);

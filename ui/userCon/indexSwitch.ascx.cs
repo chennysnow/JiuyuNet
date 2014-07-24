@@ -20,7 +20,7 @@ public partial class userCon_indexSwitch : System.Web.UI.UserControl
             System.Text.StringBuilder sbBig = new System.Text.StringBuilder();
             System.Text.StringBuilder sbSmoll = new System.Text.StringBuilder();
             //dal.flash flash = new dal.flash();
-            MySqlDal.FlashDB flash = new MySqlDal.FlashDB();
+            dal.FlashDB flash = new dal.FlashDB();
             List<mo.flash> modelList = flash.getModelListWhere("where typS='index'");
             if (modelList.Count > 0)
             {

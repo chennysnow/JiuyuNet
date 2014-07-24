@@ -25,7 +25,7 @@ public class Ajax_New : IHttpHandler {
         //    context.Response.End();
         //}
         //dal.news news = new dal.news();
-        MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+        dal.NewsDB news = new dal.NewsDB();
         List<mo.news> modelList = news.getModelListAll();
         for (int i = 0; i < modelList.Count; i++)//得到所有的
         {

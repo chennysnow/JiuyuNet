@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 public partial class admin_supply_add : System.Web.UI.Page
 {
     //dal.supply att = new dal.supply();
-    MySqlDal.SupplyDB att = new MySqlDal.SupplyDB();
+    dal.SupplyDB att = new dal.SupplyDB();
     protected void Page_Load(object sender, EventArgs e)
     {
         if(!IsPostBack)
@@ -68,7 +68,7 @@ public partial class admin_supply_add : System.Web.UI.Page
     private void attrBin()
     {
         //dal.supplyvalue attr = new dal.supplyvalue();
-        MySqlDal.SupplyvalueDB attr = new MySqlDal.SupplyvalueDB();
+        dal.SupplyvalueDB attr = new dal.SupplyvalueDB();
         List<mo.supplyvalue> modelList = attr.getModelListAll();
         repAttr.DataSource = modelList;
         repAttr.DataBind();

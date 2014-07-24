@@ -13,7 +13,7 @@ public partial class admin_Message : System.Web.UI.Page
 {
     public op.Operation ope = new op.Operation();
     //dal.message message = new dal.message();
-    MySqlDal.MessageDB message = new MySqlDal.MessageDB();
+    dal.MessageDB message = new dal.MessageDB();
     protected void Page_Load(object sender, EventArgs e)
     {
         Master.title = "留言信息";

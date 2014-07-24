@@ -24,7 +24,7 @@ public partial class admin_news_speList : System.Web.UI.Page
     private void bin()
     {
         //dal.news news = new dal.news();
-        MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+        dal.NewsDB news = new dal.NewsDB();
         List<mo.news> modelList = news.getModelListWhere("", "and typS<>'0'");
         Repeater1.DataSource = modelList;
         Repeater1.DataBind();

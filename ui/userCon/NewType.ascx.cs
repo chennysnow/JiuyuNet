@@ -23,7 +23,7 @@ public partial class userCon_NewType : System.Web.UI.UserControl
     private void bin()
     {
         //dal.menu menu = new dal.menu();
-        MySqlDal.MenuDB menu = new MySqlDal.MenuDB();
+        dal.MenuDB menu = new dal.MenuDB();
         List<mo.menu> listMenu = menu.getModelListWhere("where typ=2");
       
         if (Request.Params["typeid"] != null)
@@ -52,7 +52,7 @@ public partial class userCon_NewType : System.Web.UI.UserControl
     private void childMenu(System.Text.StringBuilder sb, int id,int j)
     {
         //dal.menu menu = new dal.menu();
-        MySqlDal.MenuDB menu = new MySqlDal.MenuDB();
+        dal.MenuDB menu = new dal.MenuDB();
         List<mo.menu> listMenu = menu.getModelListWhere("where typ=" + id);
         if (listMenu.Count > 0)
         {

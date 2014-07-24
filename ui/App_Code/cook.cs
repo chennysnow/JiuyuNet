@@ -32,7 +32,7 @@ public class cook
     public bool ValidataLogin(string userid, string userpwd)
     {
         //dal.adminUser adminUser = new dal.adminUser();
-        MySqlDal.adminUserDB adminUser = new MySqlDal.adminUserDB();
+        dal.adminUserDB adminUser = new dal.adminUserDB();
         op.Operation opera = new op.Operation();
         userid = opera.StrEncode(userid);
         userpwd = opera.StrEncode(userpwd);
@@ -138,7 +138,7 @@ public class cook
     /// <returns></returns>
     public bool login(string userid, string userpwd)
     {
-        MySqlDal.UserDB user = new MySqlDal.UserDB();
+        dal.UserDB user = new dal.UserDB();
         //dal.user user = new dal.user();
         op.Operation opera = new op.Operation();
         userid = opera.StrEncode(userid);

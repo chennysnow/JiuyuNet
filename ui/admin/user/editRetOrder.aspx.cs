@@ -9,7 +9,7 @@ public partial class admin_user_editRetOrder : System.Web.UI.Page
 {
     public mo.returnOrder model = new mo.returnOrder();
     //dal.returnOrder retOrder = new dal.returnOrder();
-    MySqlDal.ReturnOrderDB retOrder = new MySqlDal.ReturnOrderDB();
+    dal.ReturnOrderDB retOrder = new dal.ReturnOrderDB();
     protected void Page_Load(object sender, EventArgs e)
     {
         Master.title = "查看退货申请";

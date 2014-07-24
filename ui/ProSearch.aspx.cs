@@ -56,7 +56,7 @@ public partial class ProSearch : System.Web.UI.Page
 
         AspNetPager1.PageSize = op.staValue.pageSize;
         //dal.products pro = new dal.products();
-        MySqlDal.ProductsDB pro = new MySqlDal.ProductsDB();
+        dal.ProductsDB pro = new dal.ProductsDB();
         List<mo.products> modelList = pro.getModelListWhere(search);
         PagedDataSource pds = new PagedDataSource();
         pds.AllowPaging = true;

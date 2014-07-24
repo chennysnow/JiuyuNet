@@ -12,7 +12,7 @@ using System.Collections.Generic;
 public partial class admin_product_type : System.Web.UI.Page
 {
     //dal.menu menu = new dal.menu();
-    MySqlDal.MenuDB menu = new MySqlDal.MenuDB();
+    dal.MenuDB menu = new dal.MenuDB();
     setWeb set = new setWeb();
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -178,7 +178,7 @@ public partial class admin_product_type : System.Web.UI.Page
         string[] sort = Request.Form.GetValues("sort");
         // string[] display = Request.Form.GetValues("display");
         //dal.menu menu = new dal.menu();
-        MySqlDal.MenuDB menu = new MySqlDal.MenuDB();
+        dal.MenuDB menu = new dal.MenuDB();
         for (int i = 0; i < id.Length; i++)
         {
             menu.UpdateString("sortC=" + sort[i], "where id=" + id[i]);
@@ -192,7 +192,7 @@ public partial class admin_product_type : System.Web.UI.Page
         op.Operation ope = new op.Operation();
         string[] id = Request.Form.GetValues("chkId"); ;
         //dal.menu menu = new dal.menu();
-        MySqlDal.MenuDB menu = new MySqlDal.MenuDB();
+        dal.MenuDB menu = new dal.MenuDB();
         for (int i = 0; i < id.Length; i++)
         {
             menu.DelId("where id=" + id[i] + " or typ=" + id[i] + "");

@@ -24,7 +24,7 @@ public class message : IHttpHandler,IRequiresSessionState {
             model.timeC = DateTime.Now.ToString();
             op.Operation ope = new op.Operation();
             //dal.message message = new dal.message();
-            MySqlDal.MessageDB message = new MySqlDal.MessageDB();
+            dal.MessageDB message = new dal.MessageDB();
             message.InsertModel(model);
             context.Response.Write("Submitted successfully!!");            
         }

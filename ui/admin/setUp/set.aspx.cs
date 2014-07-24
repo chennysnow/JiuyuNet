@@ -29,7 +29,7 @@ public partial class admin_setUp_set : System.Web.UI.Page
             txtReceiveMail.Text = op.staValue.mail;
 
             //dal.news news = new dal.news();
-            MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+            dal.NewsDB news = new dal.NewsDB();
             txtOnline.Text = news.getString("contentC", "where typS='online'");
             txtBottom.Text = news.getString("contentC", "where typS='bottom'");
         }
@@ -154,7 +154,7 @@ public partial class admin_setUp_set : System.Web.UI.Page
             }
             xmlDoc.Save(path);
             //dal.news news = new dal.news();
-            MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+            dal.NewsDB news = new dal.NewsDB();
             news.UpdateString("contentC='"+txtOnline.Text+"'", "where typS='online'");
             news.UpdateString("contentC='" + txtBottom.Text + "'", "where typS='bottom'");
             if (flg)

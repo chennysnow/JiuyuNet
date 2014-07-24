@@ -35,7 +35,7 @@ public partial class CompanyNews : System.Web.UI.Page
             strSql = "where id=" + id;
         }
         //dal.news news = new dal.news();
-        MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+        dal.NewsDB news = new dal.NewsDB();
         mo.news model = news.getModel(strSql);
         System.Text.StringBuilder sb = new System.Text.StringBuilder();
         sb.AppendFormat("<dt>{0}</dt>", model.nameC);
@@ -50,11 +50,11 @@ public partial class CompanyNews : System.Web.UI.Page
         if (typ == 0)
             typ = 4;
         //dal.menu menu = new dal.menu();
-        MySqlDal.MenuDB menu = new MySqlDal.MenuDB();
+        dal.MenuDB menu = new dal.MenuDB();
         string str = menu.getString("nameC", "where id=" + typ);
         category = str == null ? category : str;
         //dal.news news = new dal.news();
-        MySqlDal.NewsDB news = new MySqlDal.NewsDB();
+        dal.NewsDB news = new dal.NewsDB();
         List<mo.news> modelList = news.getModelListWhere("top 15", "and typ=" + typ);
         System.Text.StringBuilder sb = new System.Text.StringBuilder();
         for (int i = 0; i < modelList.Count; i++)
