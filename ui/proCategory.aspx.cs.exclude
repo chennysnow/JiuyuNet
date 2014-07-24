@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Collections.Generic;
+
+public partial class proCategory : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            dal.keywords keywords = new dal.keywords();
+            mo.keywords model = keywords.getModel("product");
+            Master.TitleH = model.titleC;
+            Master.keyWords = model.keywordsC;
+            Master.description = model.descriptionC;
+            Master.siteHtml = "<a href='#'>产品类别</a>";
+            dal.menu menu = new dal.menu();
+            List<mo.menu> modelList = menu.getModelListWhere("where typ=1");
+            repProDisplay.DataSource = modelList;
+            repProDisplay.DataBind();
+        }
+    }
+}

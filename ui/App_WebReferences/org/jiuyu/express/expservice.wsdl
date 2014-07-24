@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetWebTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="website" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWebTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWebTimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExpressList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="typ" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExpressListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetExpressListResult" type="tns:ArrayOfExpress" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfExpress">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Express" nillable="true" type="tns:Express" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Express">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="expressName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="remark" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="logo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="statu" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="oil" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="type" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetExpressPrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ids" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExpressPriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetExpressPriceResult" type="tns:ArrayOfExpress" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExpressModel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExpressModelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetExpressModelResult" type="tns:Express" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="areaName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPriceResult" type="tns:ArrayOfExpressPrice" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfExpressPrice">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ExpressPrice" nillable="true" type="tns:ExpressPrice" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ExpressPrice">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="expressId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="areaId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="firstPrice" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="lastPrice" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetShippingPrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="areaName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="weight" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="expressid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetShippingPriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetShippingPriceResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetWebTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWebTime" />
+  </wsdl:message>
+  <wsdl:message name="GetWebTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWebTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetExpressListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetExpressList" />
+  </wsdl:message>
+  <wsdl:message name="GetExpressListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetExpressListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetExpressPriceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetExpressPrice" />
+  </wsdl:message>
+  <wsdl:message name="GetExpressPriceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetExpressPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetExpressModelSoapIn">
+    <wsdl:part name="parameters" element="tns:GetExpressModel" />
+  </wsdl:message>
+  <wsdl:message name="GetExpressModelSoapOut">
+    <wsdl:part name="parameters" element="tns:GetExpressModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPriceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPrice" />
+  </wsdl:message>
+  <wsdl:message name="GetPriceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetShippingPriceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetShippingPrice" />
+  </wsdl:message>
+  <wsdl:message name="GetShippingPriceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetShippingPriceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ExpServiceSoap">
+    <wsdl:operation name="GetWebTime">
+      <wsdl:input message="tns:GetWebTimeSoapIn" />
+      <wsdl:output message="tns:GetWebTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpressList">
+      <wsdl:input message="tns:GetExpressListSoapIn" />
+      <wsdl:output message="tns:GetExpressListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpressPrice">
+      <wsdl:input message="tns:GetExpressPriceSoapIn" />
+      <wsdl:output message="tns:GetExpressPriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpressModel">
+      <wsdl:input message="tns:GetExpressModelSoapIn" />
+      <wsdl:output message="tns:GetExpressModelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrice">
+      <wsdl:input message="tns:GetPriceSoapIn" />
+      <wsdl:output message="tns:GetPriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShippingPrice">
+      <wsdl:input message="tns:GetShippingPriceSoapIn" />
+      <wsdl:output message="tns:GetShippingPriceSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ExpServiceSoap" type="tns:ExpServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetWebTime">
+      <soap:operation soapAction="http://tempuri.org/GetWebTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpressList">
+      <soap:operation soapAction="http://tempuri.org/GetExpressList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpressPrice">
+      <soap:operation soapAction="http://tempuri.org/GetExpressPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpressModel">
+      <soap:operation soapAction="http://tempuri.org/GetExpressModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrice">
+      <soap:operation soapAction="http://tempuri.org/GetPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShippingPrice">
+      <soap:operation soapAction="http://tempuri.org/GetShippingPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ExpServiceSoap12" type="tns:ExpServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetWebTime">
+      <soap12:operation soapAction="http://tempuri.org/GetWebTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpressList">
+      <soap12:operation soapAction="http://tempuri.org/GetExpressList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpressPrice">
+      <soap12:operation soapAction="http://tempuri.org/GetExpressPrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpressModel">
+      <soap12:operation soapAction="http://tempuri.org/GetExpressModel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrice">
+      <soap12:operation soapAction="http://tempuri.org/GetPrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShippingPrice">
+      <soap12:operation soapAction="http://tempuri.org/GetShippingPrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExpService">
+    <wsdl:port name="ExpServiceSoap" binding="tns:ExpServiceSoap">
+      <soap:address location="http://express.jiuyu.org/expservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ExpServiceSoap12" binding="tns:ExpServiceSoap12">
+      <soap12:address location="http://express.jiuyu.org/expservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

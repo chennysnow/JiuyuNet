@@ -1,0 +1,74 @@
+﻿
+.divSubmit{clear:both;width:360px;float:right;margin-bottom:20px;margin-right:20px;}
+.divSubmit p{margin-top:5px;}
+.h{ background-color:#fff;}
+/*////////下单导航*/
+.cart_site{ background:url(../images/cart_site.gif) no-repeat center top;width:910px;height:70px;line-height:120px;font-weight:bolder;}
+.cart_site span{margin-left:130px;}
+.cart_site b{color:#5C7C00;font-size:12px;}
+/*///////////////列表
+.repTable{width:100%;text-align:center;margin-bottom:10px; background-color:#F6F6F6;}
+.repTable tr{}
+.repTable td{border-right:solid 1px #eee;border-bottom:solid 1px #eee;height:25px; overflow:hidden;}
+.repTableHead{clear:both;font-size:12px;font-weight:bolder;height:25px; line-height:25px;color:#fff;
+              padding-left:10px;background-color:#033c8c; 
+              }
+.repTableHead td{border-bottom:solid 1px #000;}
+.repTable .imgShopping{width:70px;}
+.repTable #count{width:30px;}
+.total{color:#aa0000;}*/
+/*/////////购物车 下面 信息总和*/
+.cart_info{background-color:#eee; text-align:right;padding:10px;width:100%;margin-right:10px; overflow:hidden;}
+.cart_info span{font-weight:bolder;color:#A75368;}
+.cart_bottom_info{ background-color:#eee; text-align:right;padding:10px;overflow:hidden;}
+#cartProInfo{line-height:20px;margin-bottom:10px;text-align:left;}
+#cartProInfo span{font-weight:bolder;color:#A75368;margin-right:10px;}
+#cartProInfo .right{float:right;margin-top:5px;margin-right:50px;}
+/*//////////////////地址信息////////*/	  
+.ulAddressInfo{line-height:25px;margin-top:10px;background-color:#F6F6F6;padding:10px;}
+.ulAddressInfo div{float:left;width:75px;margin-left:5px;color:#333;}
+.ulAddressInfo li{clear:both;color:#aaa;}
+/*///////////////////快递与支付*/
+.ulPayment{margin-top:10px;padding:0 10px;}
+.ulPayment li{clear:both;border-bottom:solid 1px #ccc;height:30px;overflow:hidden; line-height:30px;}
+.ulPayment li div{float:left;margin-right:10px;}
+.ulPayment li div img{margin-right:10px;height:30px;}
+.ulPayment .first_price,.ulPayment .last_price{width:100px;}
+.ulPayment li font{color:#aa0000;}
+/*////////////////////确认订单
+.cartProInfo_3{width:380px;float:right;line-height:20px;margin-bottom:0px;text-align:right;
+                background-color:#C2F1F1;font-size:12px;padding-right:10px;color:#000}
+.cartProInfo_3  span{font-weight:bolder;color:#aa0000;}
+.ulInfo{background-color:#F6F6F6;padding:10px;}
+.ulInfo li{clear:both;margin-top:5px;height:30px; line-height:30px;border-bottom:solid 1px #ccc;}
+.ulInfo li.zt{clear:both;margin-top:5px;height:30px; line-height:30px;border-bottom:solid 1px #ccc; float:left;}
+.ulInfo li div{float:left;width:80px; }*/
+/*/////最后一步*/
+.total_3{background-color:#EFEFEF; line-height:20px; border-bottom:none;width:500px;color:#333;
+       padding:10px;float:right; margin-bottom:10px;}
+.total_3 p{margin-top:5px;}
+.total_3 span{color:#aa0000;font-size:14px;font-weight:bolder;}
+
+.repTable{width:100%;text-align:center;margin-bottom:10px; background-color:#F6F6F6;}
+.repTable tr{}
+.repTable td{border-right:solid 1px #eee;border-bottom:solid 1px #eee;height:25px; overflow:hidden;}
+.repTableHead{clear:both;font-size:12px;font-weight:bolder;height:25px; line-height:25px;color:#fff;
+              padding-left:10px;background-color:#a8a8a8; 
+              }
+
+.repTable .imgShopping{width:70px;}
+.repTable #count{width:30px;}
+.total{color:#aa0000;}
+.ulInfo{color:#595959;}
+.ulInfo li{margin-top:5px;height:30px; line-height:30px; width:390px; float:left;}
+.ulInfo li.zt{clear:both;margin-top:5px;height:30px; line-height:30px;border-bottom:solid 1px #ccc; float:left;}
+.ulInfo li div{float:left;width:100px; text-align:right; padding-right:15px; font-weight:bold; }
+.Head{clear:both;color:#333;font-weight:bolder;height:25px; line-height:25px;padding-left:10px; background-color:#efefef;margin:10px 0px;}
+.clearfix {
+    clear: both;
+    display: block;
+    font: 0px/0 sans-serif;
+    height: 0;
+    overflow: hidden;
+}
+.red{ color:Red;}

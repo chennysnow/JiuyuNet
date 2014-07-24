@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<boot>
+  <province key="1" value="北京市" price="15" />
+  <province key="2" value="天津市" price="15" />
+  <province key="3" value="河北省" price="15" />
+  <province key="4" value="山西省" price="15" />
+  <province key="5" value="内蒙古区" price="15" />
+  <province key="6" value="辽宁省" price="15" />
+  <province key="7" value="吉林省" price="15" />
+  <province key="8" value="黑龙江省" price="15" />
+  <province key="9" value="上海市" price="15" />
+  <province key="10" value="江苏省" price="15" />
+  <province key="11" value="福建省" price="15" />
+  <province key="12" value="江西省" price="15" />
+  <province key="13" value="山东省" price="15" />
+  <province key="14" value="河南省" price="15" />
+  <province key="15" value="湖北省" price="15" />
+  <province key="16" value="湖南省" price="15" />
+  <province key="17" value="广东省" price="15" />
+  <province key="18" value="广西区" price="15" />
+  <province key="19" value="海南省" price="15" />
+  <province key="20" value="重庆市" price="15" />
+  <province key="21" value="四川省" price="15" />
+  <province key="22" value="贵州省" price="15" />
+  <province key="23" value="云南省" price="15" />
+  <province key="24" value="西藏区" price="15" />
+  <province key="25" value="陕西省" price="15" />
+  <province key="26" value="甘肃省" price="15" />
+  <province key="27" value="青海省" price="15" />
+  <province key="28" value="宁夏区" price="15" />
+  <province key="29" value="新疆区" price="15" />
+  <province key="30" value="台湾省" price="15" />
+  <province key="31" value="香港特区" price="15" />
+  <province key="32" value="澳门特区" price="15" />
+</boot>

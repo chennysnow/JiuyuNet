@@ -1,0 +1,9 @@
+﻿#jiuyuEnlarge {margin:3px;padding:3px; position: relative;  cursor:crosshair;width:360px;border:solid 1px #eee;}
+/*放大镜框*/
+#jiuyuEnlarge .enlarge_float_layer {border: 1px solid #000; background: #fff; filter: alpha(opacity: 30); opacity: 0.3; position: absolute; top: 0; left: 0; display:none; }
+/*////////////可移动区域*/
+#jiuyuEnlarge .enlarge_mark {position:absolute; z-index:2; left:0px; top:0px; background:#fff; filter:alpha(opacity:0); opacity:0;}
+/*////放大图片 DIV*/
+#jiuyuEnlarge .enlarge_big_pic { position: absolute; top:-1px; width:260px; height:260px;left:370px; overflow:hidden;  display:none; z-index:1000;}
+/*放大图片*/
+#jiuyuEnlarge .enlarge_big_pic img {position:absolute;}

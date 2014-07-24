@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<boot>
+  <post>
+    <name key="1" value="DHL" tips="DHL" add="10">
+      <price key="36" value="15" tips="Africa" />
+      <price key="39" value="15" tips="Argentina" />
+      <price key="18" value="15" tips="Australia" />
+      <price key="26" value="15" tips="Austria" />
+      <price key="16" value="15" tips="Belgium" />
+      <price key="38" value="15" tips="Brazil" />
+      <price key="50" value="15" tips="Bulgaria" />
+      <price key="6" value="15" tips="Canada" />
+      <price key="48" value="15" tips="Chile" />
+      <price key="40" value="15" tips="Columbia" />
+      <price key="64" value="15" tips="Costa Rica" />
+      <price key="61" value="15" tips="Croatia" />
+      <price key="67" value="15" tips="Cyprus" />
+      <price key="46" value="15" tips="Czech" />
+      <price key="27" value="15" tips="Denmark" />
+      <price key="60" value="15" tips="Egypt" />
+      <price key="28" value="15" tips="Finland" />
+      <price key="47" value="15" tips="France" />
+      <price key="66" value="15" tips="Georgia" />
+      <price key="19" value="15" tips="Germany" />
+      <price key="33" value="15" tips="Greece" />
+      <price key="45" value="15" tips="Hungary" />
+      <price key="35" value="15" tips="India" />
+      <price key="14" value="15" tips="Indonesia" />
+      <price key="25" value="15" tips="Ireland" />
+      <price key="56" value="15" tips="Israel" />
+      <price key="4" value="15" tips="Italy" />
+      <price key="57" value="15" tips="Japan" />
+      <price key="58" value="15" tips="Lithuania" />
+      <price key="17" value="15" tips="Luxembourg" />
+      <price key="9" value="15" tips="Malaysia" />
+      <price key="63" value="15" tips="Malta" />
+      <price key="3" value="15" tips="Mexico" />
+      <price key="37" value="15" tips="Middle East" />
+      <price key="59" value="15" tips="Morocco" />
+      <price key="7" value="15" tips="New Zealand" />
+      <price key="23" value="15" tips="Norway" />
+      <price key="51" value="15" tips="Pakistan" />
+      <price key="41" value="15" tips="Peru" />
+      <price key="11" value="15" tips="Philippine" />
+      <price key="44" value="15" tips="Poland" />
+      <price key="29" value="15" tips="Portugal" />
+      <price key="49" value="15" tips="Puerto Rico" />
+      <price key="21" value="15" tips="Romania" />
+      <price key="22" value="15" tips="Russia" />
+      <price key="65" value="15" tips="Saint Kitts" />
+      <price key="20" value="15" tips="San Marino" />
+      <price key="52" value="15" tips="Saudi Arabia" />
+      <price key="12" value="15" tips="Singapore" />
+      <price key="62" value="15" tips="Slovenia" />
+      <price key="54" value="15" tips="South Africa" />
+      <price key="8" value="15" tips="South Korea" />
+      <price key="32" value="15" tips="Spain" />
+      <price key="24" value="15" tips="Sri Lanka" />
+      <price key="30" value="15" tips="Sweden" />
+      <price key="31" value="15" tips="Swiss" />
+      <price key="10" value="15" tips="Thailand" />
+      <price key="1" value="15" tips="USA" />
+    </name>
+    <name key="2" value="Express" tips="Express 3-5 Days" add="10">
+    </name>
+  </post>
+  <payment>
+    <name key="1" value="Paypal" tips="Paypal Paypal Paypal" />
+    <name key="2" value="Blank of china" tips="Blank of china" add="" />
+  </payment>
+</boot>

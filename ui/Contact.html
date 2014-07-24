@@ -1,0 +1,148 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1"><title>
+	
+</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><link rel="shortcut icon" href="/images/favicon.ico" /><link href="/css/Master.css" rel="stylesheet" type="text/css" /><link href="/css/Content_1.css" rel="stylesheet" type="text/css" />
+    <script src="/js/jquery.js" type="text/javascript"></script>
+    <script src="/js/public.js" type="text/javascript"></script>
+     
+<link href="/css/page.css" rel="stylesheet" type="text/css" /><meta name="keywords" /><meta name="description" /></head>
+<body>    
+    <div id="top_keywords"></div>
+    <div class="h">
+    
+<div class="top">
+    <div class="top_keywords">
+        &nbsp;<a href="#">Test</a></div>
+    <div class="top_logo">
+        <a class="logo" href="/" title="The Matchmaker">&nbsp;</a>
+        <!--搜索-->
+        <div class="searchLogin">
+            <div id="loginInfo">
+                Welcome! <a href="login.aspx" rel="nofollow">Sign in</a> or <a href="login.aspx"
+                    rel="nofollow">Register</a></div>
+            <div class="search">
+                <input type="text" id="seaKey" value="" />
+                <span id="btnSearch" onclick="return search()">&nbsp;</span>
+            </div>
+        </div>
+        <!--购物车-->
+        <div class="cart">
+            <a href="http://localhost:14254/order/shopping.aspx">Shopping Cart<br />
+                <span id="cartCount">0</span></a>
+        </div>
+    </div>
+    <ul class="top_menu">
+        <li class="liLevel1"><a href="http://localhost:14254">Home</a></li>
+        <li class="liLevel1"><a href="/prolist.html?flg=new">New Product</a></li>
+        <li class="liLevel1"><a href="http://localhost:14254/proList.html?typ=11">Necklaces</a><ul class="ulLevel2"><li class="liLevel2"><a href="http://localhost:14254/proList.html?typ=30">Jewelry Brands</a></li><li class="liLevel2"><a href="http://localhost:14254/proList.html?typ=29">Shop By Material</a><ul class="ulLevel3"><li class="liLevel3"><a href="http://localhost:14254/proList.html?typ=34">Rings Under</a></li><li class="liLevel3"><a href="http://localhost:14254/proList.html?typ=33">Coloured Rings</a></li><li class="liLevel3"><a href="http://localhost:14254/proList.html?typ=32">Whedding Rings</a></li><li class="liLevel3"><a href="http://localhost:14254/proList.html?typ=31">Jewelry Brands</a></li></ul></li><li class="liLevel2"><a href="http://localhost:14254/proList.html?typ=28">Whta's New</a><ul class="ulLevel3"><li class="liLevel3"><a href="http://localhost:14254/proList.html?typ=36">Test What's new</a></li><li class="liLevel3"><a href="http://localhost:14254/proList.html?typ=35">Test Christmas</a></li></ul></li><li class="liLevel2"><a href="http://localhost:14254/proList.html?typ=26">Earrings</a></li><li class="liLevel2"><a href="http://localhost:14254/proList.html?typ=25">Test Necklaces</a></li></ul></li><li class="liLevel1"><a href="http://localhost:14254/proList.html?typ=27">Gift Eets</a></li><li class="liLevel1"><a href="http://localhost:14254/proList.html?typ=24">Cooperation</a></li><li class="liLevel1"><a href="http://localhost:14254/proList.html?typ=23">Business Advertising With Accessories</a></li><li class="liLevel1"><a href="http://localhost:14254/proList.html?typ=22">Watches</a></li><li class="liLevel1"><a href="http://localhost:14254/proList.html?typ=21">Sunglasses</a></li><li class="liLevel1"><a href="http://localhost:14254/proList.html?typ=20">Accessories</a></li><li class="liLevel1"><a href="http://localhost:14254/proList.html?typ=19">Gifts</a></li><li class="liLevel1"><a href="http://localhost:14254/proList.html?typ=18">Men's Jewelry</a></li><li class="liLevel1"><a href="http://localhost:14254/proList.html?typ=17">Weddings</a></li><li class="liLevel1"><a href="http://localhost:14254/proList.html?typ=16">Headdresses</a></li><li class="liLevel1"><a href="http://localhost:14254/proList.html?typ=15">Brooches</a></li><li class="liLevel1"><a href="http://localhost:14254/proList.html?typ=14">Bracelets</a></li><li class="liLevel1"><a href="http://localhost:14254/proList.html?typ=13">Rings</a><ul class="ulLevel2"><li class="liLevel2"><a href="http://localhost:14254/proList.html?typ=38">test test</a></li><li class="liLevel2"><a href="http://localhost:14254/proList.html?typ=37">test</a></li></ul></li><li class="liLevel1"><a href="http://localhost:14254/proList.html?typ=12">Earrings</a></li><li class="liLevel1"><a href="/About.html">About Us</a></li><li class="liLevel1"><a href="http://localhost:14254/newList.html?typ=4">News</a></li><li class="liLevel1"><a href="http://localhost:14254/newList.html?typ=10">Customer Service</a></li>
+    </ul>
+    
+</div>
+<script type="text/javascript">
+    $(".top_menu .liLevel1").hover(function () {
+        var $ul2 = $(this).find(".ulLevel2");
+        $ul2.css({ display: "block" });
+        $ul2.find(".liLevel2").hover(function () {
+            $(this).addClass("liOn");
+            $(this).find(".ulLevel3").css({ display: "block", top: $(this).position().top-2 });
+        }, function () {
+            $(this).removeClass("liOn");
+            $(".ulLevel3").css({ display: "none" });
+        });
+    }, function () {
+        $(".ulLevel2").css({ display: "none" });
+    }); 
+</script>
+
+    
+<div class="site">
+&nbsp; <b>You are hear:</b> <a href="http://localhost:14254">Home</a> <a href='' title=''></a> > <a href='newlist.aspx?typ=3' title='About Us'>About Us</a> > <a href='newshow.aspx?id=2' title='Contact us'>Contact us</a> 
+</div>
+            
+    <form name="aspnetForm" method="post" action="NewShow.aspx?id=2&amp;clBuffer=57" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJLTI2NDU4NjQ5D2QWAmYPZBYGAgIPZBYCZg8WAh4EVGV4dAWXASA8YSBocmVmPScnIHRpdGxlPScnPjwvYT4gPiA8YSBocmVmPSduZXdsaXN0LmFzcHg/dHlwPTMnIHRpdGxlPSdBYm91dCBVcyc+QWJvdXQgVXM8L2E+ID4gPGEgaHJlZj0nbmV3c2hvdy5hc3B4P2lkPTInIHRpdGxlPSdDb250YWN0IHVzJz5Db250YWN0IHVzPC9hPiBkAgMPZBYCAgEPZBYGZg8WAh8ABfkCPGxpPjxmb250IGNvbG9yPSIjYWEwMDAwIj4mIzgyMjY7Jm5ic3A7PC9mb250PjxhIGhyZWY9J0dpZnQtVG8tQ29tbWVtb3JhdGUtLmh0bWwnPkdpZnQgVG8gQ29tbWVtb3JhdGUgPC9hPjwvbGk+PGxpPjxmb250IGNvbG9yPSIjYWEwMDAwIj4mIzgyMjY7Jm5ic3A7PC9mb250PjxhIGhyZWY9J0NvbnRhY3RVcy5odG1sJz5Db250YWN0IHVzPC9hPjwvbGk+PGxpPjxmb250IGNvbG9yPSIjYWEwMDAwIj4mIzgyMjY7Jm5ic3A7PC9mb250PjxhIGhyZWY9J0Fib3V0Lmh0bWwnPkFib3V0IHVzPC9hPjwvbGk+PGxpPjxmb250IGNvbG9yPSIjYWEwMDAwIj4mIzgyMjY7Jm5ic3A7PC9mb250PjxhIGhyZWY9J091clNlcnZpY2UuaHRtbCc+T3VyIFNlcnZpY2U8L2E+PC9saT5kAgEPZBYCAgEPFgIfAAXYAjxwPg0KCUFERDpDLTI3MTEgU291dGggVG93ZXIgdGhlIEhVQiBFYXN0IFhpbmdHYW5nIFhYWCBYWFggRGlzdHJpY3Qgb2YgQ2FudG9uIGZhaXIgR3VhbmdaaG91IENISU5BPC9wPg0KPHA+DQoJVEVMOiAwMjAtWFhYWFhYWCZuYnNwOzwvcD4NCjxwPg0KCUZBWDowMjAtWFhYWFhYWFg8L3A+DQo8cD4NCglFLW1haWw6Jm5ic3A7IDxhIGhyZWY9Im1haWx0bzpYWFhAaG90bWFpbC5jb20iPlhYWEBob3RtYWlsLmNvbTwvYT48L3A+DQo8cD4NCgk8aW1nIGFsdD0iIiBzcmM9Ii91cGxvYWRGaWxlL2ltYWdlcy9jb250YWN0X21zbi5wbmciIHN0eWxlPSJ3aWR0aDogMTIycHg7IGhlaWdodDogMzBweCIgLz48L3A+ZAICDxYCHwAFngM8ZHQ+Q29udGFjdCB1czwvZHQ+PGRkPjxwPg0KCUFERDpDLTI3MTEgU291dGggVG93ZXIgdGhlIEhVQiBFYXN0IFhpbmdHYW5nIFJvYWQgMTA2OCBIYWlaaHUgRGlzdHJpY3Qgb2YgQ2FudG9uIGZhaXIgR3VhbmdaaG91IENISU5BPC9wPg0KPHA+DQoJVEVMOjAyMC04MTI5MTE3OCZuYnNwOyAwMjAtODEyOTExMDgmbmJzcDsgMDIwLTgxMjk5NTg4PC9wPg0KPHA+DQoJRkFYOjAyMC04MTI5MTEwOCZuYnNwOyAwMjAtODEyOTExNzg8L3A+DQo8cD4NCglFLW1haWw6Jm5ic3A7IDxhIGhyZWY9Im1haWx0bzprYWluaWIyYkBob3RtYWlsLmNvbSI+a2FpbmliMmJAaG90bWFpbC5jb208L2E+PC9wPg0KPC9kZD48ZGQ+PHNwYW4gc3R5bGU9J21hcmdpbi1sZWZ0OjQ4MHB4Oyc+PC9zcGFuPlBvc3RlZDoyMDEyLTEyLTEyIDEyOjEyPC9kZD5kAgUPZBYCAgEPFgIfAGVkZPZzZ9Ehzhk7n37VttKRWmNSad/Z" />
+
+<div class="indexLeft">
+     <div class="left_head">About Us</div>
+        <ul class="ulMenuNew">
+            <li><font color="#aa0000">&#8226;&nbsp;</font><a href='Gift-To-Commemorate-.html'>Gift To Commemorate </a></li><li><font color="#aa0000">&#8226;&nbsp;</font><a href='ContactUs.html'>Contact us</a></li><li><font color="#aa0000">&#8226;&nbsp;</font><a href='About.html'>About us</a></li><li><font color="#aa0000">&#8226;&nbsp;</font><a href='OurService.html'>Our Service</a></li>
+        </ul>
+    
+<br /><br />
+<div class="left_head">Contact Us</div>
+<div class="left_contact">
+<p>
+	ADD:C-2711 South Tower the HUB East XingGang XXX XXX District of Canton fair GuangZhou CHINA</p>
+<p>
+	TEL: 020-XXXXXXX&nbsp;</p>
+<p>
+	FAX:020-XXXXXXXX</p>
+<p>
+	E-mail:&nbsp; <a href="mailto:XXX@hotmail.com">XXX@hotmail.com</a></p>
+<p>
+	<img alt="" src="/uploadFile/images/contact_msn.png" style="width: 122px; height: 30px" /></p>
+</div>
+</div>
+<div class="indexRight">
+    <dl class="dlNews">
+        <dt>Contact us</dt><dd><p>
+	ADD:C-2711 South Tower the HUB East XingGang Road 1068 HaiZhu District of Canton fair GuangZhou CHINA</p>
+<p>
+	TEL:020-81291178&nbsp; 020-81291108&nbsp; 020-81299588</p>
+<p>
+	FAX:020-81291108&nbsp; 020-81291178</p>
+<p>
+	E-mail:&nbsp; <a href="mailto:kainib2b@hotmail.com">kainib2b@hotmail.com</a></p>
+</dd><dd><span style='margin-left:480px;'></span>Posted:2012-12-12 12:12</dd>
+    </dl>
+</div>
+    </form>
+
+        
+<p class="cl">&nbsp;</p>
+<div class="bottom">
+    <ul class="bottom_news">
+     <li class="contact">
+      <p style="font-size:13px;margin-bottom:5px;"><b>Keep Up-To-Date</b></p>
+      <p><b>Sign up to email</b></p>
+      <div class="regMail">
+      <input type="text" id="sendMail" size="12" />
+            <img src="/images/go.gif" onclick="regMail()" />
+      </div>
+     </li>
+     
+     <li><a href="http://localhost:14254/newList.html?typ=5"><h3>Recent Orders</h3></a>
+     </li>
+     
+     <li><a href="http://localhost:14254/newList.html?typ=9"><h3>Refund & Return</h3></a>
+     </li>
+     
+     <li><a href="http://localhost:14254/newList.html?typ=8"><h3>Dispatch & Delivery</h3></a>
+     </li>
+     
+     <li><a href="http://localhost:14254/newList.html?typ=7"><h3>Payment</h3></a>
+     <div><b>&#8226; </b><a href='http://localhost:14254/news/33_news.html' title='Xiang Shuo Jewelry: facing 200'>Xiang Shuo Jewelry: facing 200</a></div><div><b>&#8226; </b><a href='http://localhost:14254/news/31_news.html' title='gold jewelry buy discount realized'>gold jewelry buy discount realized</a></div><div><b>&#8226; </b><a href='http://localhost:14254/news/32_news.html' title='more than a narrow channel'>more than a narrow channel</a></div><div><b>&#8226; </b><a href='http://localhost:14254/news/34_news.html' title='billion business opportunit'>billion business opportunit</a></div></li>
+        
+    </ul>
+    <div class="bottom_Copy">
+         
+        </div>
+            <div class="bottom_Copy">
+ Copyright Notice © 2011 - 2021 Webfront All rights reserved.&nbsp;&nbsp;&nbsp;Technial Support:<a href="http://www.jiuyu.org">Jiu Yu Design</a>
+    </div>
+</div>
+    </div>
+    
+<div id="online">
+  <img src="/images/co2.gif" id="online_menu" />
+  <div id="online_content">
+   
+  </div>
+</div>
+
+    <script src="http://localhost:14254/js/JsCook.js" type="text/javascript"></script>
+    <script src="http://localhost:14254/js/JsBottom.js" type="text/javascript"></script> 
+</body>
+</html>

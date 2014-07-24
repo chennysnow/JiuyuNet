@@ -1,0 +1,7 @@
+﻿.ul_user_menu { padding: 10px 10px 10px 15px; background-color: #f3f3f3;border:1px solid #ddd;border-top:none;margin-bottom:5px;width:171px }
+.ul_user_menu li { margin-bottom: 10px; background:url(/images/red_arrow_bg.gif) no-repeat left;padding-left:15px; }
+.ul { padding-left: 10px; }
+.ul li { clear: both; margin-top: 5px; color: #ccc; line-height: 20px; }
+.ul div { float: left; width: 80px;color: #333; }
+.border{border:1px solid #ccc;padding:10px;width:768px;}
+.indexRight{ background-color:#fff;padding-bottom:100px;}

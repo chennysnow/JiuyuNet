@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<boot>
+  <typ type="video" value="http://player.youku.com/player.php/sid/XMTYwNDMwMjU2/v.swf" />
+  <typ type="flash" value="sdfsdfsd顶替顶替枯" />
+  <typ type="gbp">
+    <info name="Pfd" value="10.5" />
+    <info name="bcs" value="2.5" />
+  </typ>
+</boot>

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<boot>
+  <news url="newlist.aspx?typ=94" title="help " description="help " href="/newlist.html?typ=94">
+    <items url="newshow.aspx?id=69" title="eeeeee" description="eeeeee" href="/news/AboutFashionJewelry.html" />
+    <items url="newshow.aspx?id=68" title="Contact Us" description="Contact Us" href="/news/ContactUs .html" />
+    <items url="newshow.aspx?id=67" title="Security Policy" description="Security Policy" href="/news/Security Policy.html" />
+    <items url="newshow.aspx?id=66" title="Delivery Policy" description="Delivery Policy" href="/news/DeliveryPolicy.html" />
+    <items url="newshow.aspx?id=65" title="Site Map" description="Site Map" href="/news/Site Map.html" />
+    <items url="newshow.aspx?id=64" title="Affiliate Program" description="Affiliate Program" href="/news/AffiliateProgram.html" />
+    <items url="newshow.aspx?id=63" title="Accessibility" description="Accessibility" href="/news/Accessibility.html" />
+    <items url="newshow.aspx?id=62" title="FAQ's" description="FAQ's" href="/news/FrequentilyAskedQuestions.html" />
+    <items url="newshow.aspx?id=61" title="Privacy Policy" description="Privacy Policy" href="/news/PrivacyPolicy.html" />
+    <items url="newshow.aspx?id=60" title="Care And Maintenance Products" description="Care And Maintenance Products" href="/news/CareAndMaintenanceProducts.html" />
+    <items url="newshow.aspx?id=59" title="Vocabulary" description="Vocabulary" href="/news/Vocabulary.html" />
+    <items url="newshow.aspx?id=58" title="Wish List" description="Wish List" href="/news/WishList.html" />
+    <items url="newshow.aspx?id=57" title="Product Distribution" description="Product Distribution" href="/news/ProductDistribution.html" />
+    <items url="newshow.aspx?id=56" title="Payment" description="Payment" href="/news/Payment.html" />
+    <items url="newshow.aspx?id=55" title="Distribution Process" description="Distribution Process" href="/news/DistributionProcess.html" />
+    <items url="newshow.aspx?id=54" title="Order Inquiry" description="Order Inquiry" href="/news/OrderInquiry.html" />
+    <items url="newshow.aspx?id=53" title="Order" description="Order" href="/news/Order.html" />
+    <items url="newshow.aspx?id=52" title="Under A Single Process" description="Under A Single Process" href="/news/UnderASingleProcess.html" />
+    <items url="newshow.aspx?id=51" title="Comments And Complaints" description="Comments And Complaints" href="/news/CommentsAndComplaints.html" />
+  </news>
+  <news url="newlist.aspx?typ=68" title="COOPERATION" description="COOPERATION" href="/newlist.html?typ=68">
+    <items url="newshow.aspx?id=23" title="Products Questions234" description="Products Questions234" href="/news/23_news.html" />
+    <items url="newshow.aspx?id=19" title="Shipping &amp; Delivery" description="Shipping &amp; Delivery" href="/news/19_news.html" />
+    <items url="newshow.aspx?id=18" title="New user-guide" description="New user-guide" href="/news/18_news.html" />
+  </news>
+  <news url="newlist.aspx?typ=3" title="BRAND STORY" description="BRAND STORY" href="/newlist.html?typ=3">
+    <items url="newshow.aspx?id=48" title="sfsfsd" description="sfsfsd" href="/news/sfsdf.html" />
+    <items url="newshow.aspx?id=47" title="Gift To Commemorate " description="Gift To Commemorate " href="/news/Gift-To-Commemorate-.html" />
+    <items url="newshow.aspx?id=1" title="Yiwu Heli Industry Co.,Ltd " description="Yiwu Heli Industry Co.,Ltd " href="/news/About.html" />
+    <items url="newshow.aspx?id=20" title="Our Service" description="Our Service" href="/news/OurService.html" />
+  </news>
+  <news url="newlist.aspx?typ=4" title="PRODUCT NEWS" description="PRODUCT NEWS" href="/newlist.html?typ=4">
+    <items url="newshow.aspx?id=38" title="Do you want to be a blonde one day and a redhead the next?" description="Do you want to be a blonde one day and a redhead the next?" href="/news/38_news.html" />
+    <items url="newshow.aspx?id=39" title="Do you want to be a blonde one day and a redhead the next?" description="Do you want to be a blonde one day and a redhead the next?" href="/news/39_news.html" />
+    <items url="newshow.aspx?id=40" title="Do you want to be a blonde one day and a redhead the next?" description="Do you want to be a blonde one day and a redhead the next?" href="/news/40_news.html" />
+    <items url="newshow.aspx?id=41" title="Do you want to be a blonde one day and a redhead the next?" description="Do you want to be a blonde one day and a redhead the next?" href="/news/41_news.html" />
+    <items url="newshow.aspx?id=42" title="Do you want to be a blonde one day and a redhead the next?" description="Do you want to be a blonde one day and a redhead the next?" href="/news/42_news.html" />
+    <items url="newshow.aspx?id=43" title="Do you want to be a blonde one day and a redhead the next?" description="Do you want to be a blonde one day and a redhead the next?" href="/news/43_news.html" />
+    <items url="newshow.aspx?id=44" title="Do you want to be a blonde one day and a redhead the next?" description="Do you want to be a blonde one day and a redhead the next?" href="/news/44_news.html" />
+    <items url="newshow.aspx?id=45" title="Do you want to be a blonde one day and a redhead the next?" description="Do you want to be a blonde one day and a redhead the next?" href="/news/45_news.html" />
+    <items url="newshow.aspx?id=46" title="Do you want to be a blonde one day and a redhead the next?" description="Do you want to be a blonde one day and a redhead the next?" href="/news/46_news.html" />
+  </news>
+  <news url="newlist.aspx?typ=70" title="FESTIVAL EXPRESS" description="FESTIVAL EXPRESS" href="/newlist.html?typ=70" />
+  <news url="newlist.aspx?typ=71" title="INCENTIVES" description="INCENTIVES" href="/newlist.html?typ=71" />
+  <news url="newlist.aspx?typ=74" title="JEWELRY CRAFT" description="JEWELRY CRAFT" href="/newlist.html?typ=74" />
+  <menu url="prolist.aspx" title="Products" description="Products" href="/proList.html">
+    <menu_1 url="prolist.aspx?typ=99" title="菜单名称" description="菜单名称" href="/prolist.html?typ=99">
+      <product url="proshow.aspx?id=15" title="标题" description="标题" href="/静态名称_s15" />
+    </menu_1>
+    <menu_1 url="prolist.aspx?typ=96" title="Other" description="Other" href="/prolist.html?typ=96">
+      <menu_2 url="prolist.aspx?typ=97" title="222" description="222" href="/prolist.html?typ=97">
+        <menu_3 url="prolist.aspx?typ=98" title="333" description="333" href="/prolist.html?typ=98" />
+      </menu_2>
+    </menu_1>
+    <menu_1 url="prolist.aspx?typ=95" title="Khan,steam service" description="Khan,steam service" href="/prolist.html?typ=95" />
+    <menu_1 url="prolist.aspx?typ=18" title="Beach swimwear" description="Beach swimwear" href="/prolist.html?typ=18" />
+    <menu_1 url="prolist.aspx?typ=16" title="Bikini" description="Bikini" href="/prolist.html?typ=16" />
+    <menu_1 url="prolist.aspx?typ=15" title="Flat foot style swimsuit" description="Flat foot style swimsuit" href="/prolist.html?typ=15" />
+    <menu_1 url="prolist.aspx?typ=13" title="Skirt-style swimsuit" description="Skirt-style swimsuit" href="/prolist.html?typ=13" />
+    <menu_1 url="prolist.aspx?typ=17" title="Sexy pajamas" description="Sexy pajamas" href="/prolist.html?typ=17" />
+    <menu_1 url="prolist.aspx?typ=14" title="桑拿特 service" description="桑拿特 service" href="/prolist.html?typ=14" />
+    <menu_1 url="prolist.aspx?typ=64" title="Swimwear fabrics" description="Swimwear fabrics" href="/prolist.html?typ=64" />
+    <menu_1 url="prolist.aspx?typ=65" title="Piece swimsuit" description="Piece swimsuit" href="/prolist.html?typ=65" />
+    <menu_1 url="prolist.aspx?typ=11" title="Waist-style swimsuit" description="Waist-style swimsuit" href="/prolist.html?typ=11" />
+    <menu_1 url="prolist.aspx?typ=12" title="Split swimsuit" description="Split swimsuit" href="/prolist.html?typ=12" />
+  </menu>
+  <news url="newshow.aspx?id=7" title="CUSTOMIZED ACCORDING TO THEIR TYPE" description="CUSTOMIZED ACCORDING TO THEIR TYPE" href="/news/7_news.html" />
+  <news url="newshow.aspx?id=6" title="EffECT OF DISPLAY" description="EffECT OF DISPLAY" href="/news/6_news.html" />
+  <news url="newshow.aspx?id=5" title="2012NewProduct" description="2012NewProduct" href="/news/5_news.html" />
+  <news url="newshow.aspx?id=1" title="Yiwu Heli Industry Co.,Ltd " description="Yiwu Heli Industry Co.,Ltd " href="/news/About.html" />
+  <news url="newshow.aspx?id=2" title="Contact us" description="Contact us" href="/news/ContactUs.html" />
+  <news url="newshow.aspx?id=3" title="网站底部" description="网站底部" href="/news/3_news.html" />
+  <news url="newshow.aspx?id=4" title="在线聊天" description="在线聊天" href="/news/4_news.html" />
+</boot>

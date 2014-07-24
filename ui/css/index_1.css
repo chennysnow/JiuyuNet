@@ -1,0 +1,28 @@
+﻿
+/*///////////////flash图片切换*/		 		 
+#flash{ clear:both;width:427px;height:313px;overflow:hidden;}
+#flash img{width:427px;height:313px;}
+/*推荐菜单*/
+.ulIndexImg{width:980px; overflow:hidden;margin-bottom:10px;}
+.ulIndexImg a:link,.ulIndexImg a:visited{color:#fff;font-size:12px;font-weight:bolder;}
+.ulIndexImg li{float:left;width:320px;margin-right:10px;margin-top:10px; position:relative; overflow:hidden;}
+.ulIndexImg .more{ position:absolute;right:5px;bottom:5px;}
+.ulIndexImg li .img{width:320px;height:225px;}
+/*新品*/
+.dlNewPro{margin-top:10px;width:960px; padding:5px 10px 5px 10px;overflow:hidden;color:#fff;background:url(/images/bottom-bg-1.png) repeat-x;}
+.dlNewPro dt{font-weight:bolder;font-size:13px;margin-bottom:5px;}
+.dlNewPro li{float:left;width:100px;margin-left:10px;margin-right:10px;}
+.dlNewPro li div{margin-top:3px;height:42px; overflow:hidden;}
+.dlNewPro li .img{width:100px;}
+.dlNewPro a:link,.dlNewPro a:visited{color:#fff;}
+.dlNewPro a:hover{color:#aa0000;}
+.l_flash_pic{ width:990px; margin:0 auto}
+#ifocus { width:990px; height:545px;}
+#ifocus_pic {  position:absolute;float:left;width:990px; height:545px; overflow:hidden; float:left }
+#ifocus_piclist { position:absolute; z-index:1 }
+#ifocus_piclist li { width:990px; height:545px; list-style:none}
+#ifocus_piclist img { width:990px; height:545px; border:0px}
+#ifocus_btn { position:absolute; display:inline; float:right; width:130px; z-index:2; padding-left:850px; overflow:hidden; height:500px }
+#ifocus_btn li { width:130px; height:100px; cursor:pointer; list-style:none }
+#ifocus_btn img { width:130px; height:100px;   border:0px}
+#ifocus_btn .current img { border:1px solid red}

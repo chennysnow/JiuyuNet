@@ -1,0 +1,18 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="top.ascx.cs" Inherits="userCon_top" %>
+<script type="text/javascript" src=" http://www.google.com/jsapi"></script> 
+    <script type="text/javascript" src="js/translate-this.js"></script> 
+    <script type="text/javascript" defer>TranslateThis();</script>
+<div id="translate-this" ><a href="javascript:void(0);" class="translate-this-button">&nbsp;</a></div>
+<div class="top">
+  <img src="images/index_1.gif" />
+<ul class="top_menu">
+<li class="index.html"><a href="index.html">Home</a></li>
+<li><a href="News.html">News</a></li>
+<li><a href="Products.html">Products</a></li>
+<asp:Literal ID="liMenu" runat="server"></asp:Literal>
+<li><a href="Message.html">Message</a></li>
+</ul>
+<div class="search">Key Words Search:
+        <input type="text" id="searchWords" value="" />
+        <input type="button" id="btnSearch" class="input_button" /></div>
+</div>

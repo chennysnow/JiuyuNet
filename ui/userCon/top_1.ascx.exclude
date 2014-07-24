@@ -1,0 +1,79 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="top_1.ascx.cs" Inherits="userCon_top_1" %>
+<div style="background-color: #DEDEDE; height: 30px; overflow: hidden;">
+    <div class="top_login">
+        <div class="left">
+            您好,欢迎光临菜虫土特产!</div>
+        <div class="right">
+        <% if(Request.Cookies["userName"]==null||Request.Cookies["userName"].Value=="") %>
+        <%{ %>
+            <form action="ajax/login.ashx" method="post">
+            用户名:<input type="text" name="txtUserName" id="txtUserName" />
+            密码:<input type="text" name="txtPassword" id="txtPassword" />
+            <input type="image" src="/images/btn_login_t.gif" id="btnLogin" />
+            <input type="image" src="/images/btn_register_t.gif" id="btnRegister" />
+            <a href="login.aspx?flg=2">忘记密码?</a>
+            </form>
+            <%} %>
+        <%else %>
+        <%{ %>
+        欢迎 <b><%=Request.Cookies["userName"].Value %></b> 登陆  &nbsp;|&nbsp;<a href="user.aspx">用户中心</a>
+        <%} %>
+        </div>
+    </div>
+</div>
+<div class="top">
+    <div class="top_logo">
+        <a href="index.aspx">
+            <img src="images/logo.gif" alt="Jewelry" /></a>
+    </div>
+    <div class="right">
+        <div>
+            <div class="search">
+                &nbsp;&nbsp;<b>搜索</b>
+                <select id="seaType">
+                    <option value="0">::所有::</option>
+                    <% for (int i = 0; i < modelList.Count; i++) %>
+                    <%{ %>
+                    <option value="<%= modelList[i].id %>">
+                        <%= modelList[i].nameC %></option>
+                    <%} %>
+                </select>
+                <input type="text" id="seaKey" value="" />
+                <a href="#">
+                    <img src="images/btn_go.gif" id="btnSearch" onclick="search()" /></a>
+            </div>
+            <div class="cart">
+                <img src="images/cart.gif" alt="购物车" style=" position:absolute;top:-5px;left:0px;" /><span id="cartCount">0</span> <a href="shopping.aspx">
+                    <img src="images/btn_check.gif"/></a>
+            </div>
+        </div>
+        <ul class="ul_menu">
+            <li>
+                    <a href="index.aspx">首    页</a>
+                    <span>Home</span>
+                </li>
+                <li>
+                    <a href="About.aspx">公司简介</a>
+                    <span>About Us</span>
+                </li>
+                <li>
+                    <a href="proShow.aspx">产品展示</a>
+                    <span>Product</span><br />
+                    <img src="../images/biao_jiao.gif" />
+                </li>
+                <li>
+                    <a href="About.aspx">关于我们</a>
+                    <span>About Us</span>
+                </li>
+                <li>
+                    <a href="ContactUs.aspx">联系我们</a>
+                    <span>Contact Us</span>
+                </li>
+                <li>
+                    <a href="Message.aspx">在线留言</a>
+                    <span>Feedback</span>
+                </li>
+        </ul>
+        <div class="div_son_menu"><asp:Literal ID="liMenuPro" runat="server"></asp:Literal></div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+﻿
+.btn_cart2{ border:none; cursor:pointer; background:url(/images/btn-cart.gif) no-repeat; height:23px; width:88px}
+.btn_white{width:86px;height:23px; line-height:23px;background:url(/images/btn-white.gif) no-repeat;color:#aa0000;font-weight:bolder;
+           font-size:12px; text-align:center;border:none; cursor:pointer; }
+.border{border:1px solid #ddd;width:778px;margin-bottom:10px;margin-right:10px; overflow:hidden; background-color:#fff;}
+/*产品列表*/
+.ListAbout{width:725px;margin:0px 20px 0px 5px;padding:20px;color:#fff; line-height:20px; }
+.ListAbout a:link,.ListAbout a:visited{color:#fff;}
+
+#pro_scroll_key{position:relative;height:145px;overflow:hidden;text-align:left;margin:0px 10px 10px 0; background-color:#fff;}
+#pro_scroll_key ul{position:absolute; width:20000px;}
+#pro_scroll_key li{float:left;border:solid 1px #eee;padding:3px;margin:0px 20px 0px 0px;width:100px; overflow:hidden;}
+#pro_scroll_key li img{width:100px;}
+#pro_scroll_key li div{margin:5px 0 5px 0;height:26px; overflow:hidden;}
+/*/同类推荐图片滚动//*/
+.ulProType{width:778px;}
+.ulProType li{float:left;margin:10px 8px;padding:5px;height:220px;width:130px;overflow:hidden; background-color:#f6f6f6;}
+.ulProType li div{margin:0;font-weight:normal;font-size:11px;}
+.ulProType li .img{width:130px;}
+
+   /*////////头部*/
+   .divProHead{clear:both; background:url(/images/tab_14.gif) repeat-x;height:27px;border-bottom:solid 1px #800606;}
+   .divProHead span{background:url(../images/z_menu.png) repeat-x 0px -45px;height:27px;width:120px;display:block;color:#fff;font-size:14px; font-weight:bolder;text-align:center; line-height:31px;}
+#pro_title{float:left;margin:5px 0 10px 10px;width:370px;text-align:left;}
+#pro_title h1{border-bottom:2px solid #eee;padding-bottom:10px;margin:0px;}
+#pro_title ul{margin-left:10px;}
+#pro_title ul li{clear:both;margin:15px 0px 15px 0px; line-height:100%;}
+#pro_title ul li span{ display:block;width:70px;color:#000;font-weight:bolder;float:left;}
+#pro_title .name{border-bottom:solid 1px #ccc; padding-bottom:5px;margin-bottom:10px;font-weight:bolder;font-size:14px;}
+.tbPrice{margin-top:5px;}
+.tbPrice td{border-bottom:1px solid #ddd;padding:5px 5px 2px 5px;}
+.tbPrice .head{font-weight:bolder;}
+
+.description{clear:both;margin-bottom:10px;padding:10px; line-height:20px;width:980px;}
+
+/*////////////////////多角度图片*/
+.ulMoreImg{width:360px;}
+.ulMoreImg li{float:left;padding:3px;margin:2px; overflow:hidden;}
+.ulMoreImg li .imgHover{border:solid 1px #892337;}
+.ulMoreImg li img{width:60px;cursor:pointer;border:solid 1px #ddd;}
+
+/*///////////////////询盘*/
+.ulInquiry{float:left; text-align:left;margin-top:10px;}
+.ulInquiry li{margin:5px;clear:both;}
+.ulInquiry li div{width:85px; float:left;}
+.ulInquiry li #txtName,.ulInquiry li #txtEmail{width:300px;}
+
+/*////////////新闻列表*/
+.ulNewList{padding:0 10px;}
+.ulNewList li{line-height:25px; list-style-image:url(/images/biao-news.gif);margin:5px 5px 5px 30px;border-bottom:solid 1px #eee;}
+.ulNewList li .dateStr{float:right;color:#cccccc;}
+.ulNewList li div{color:#9C9A9C;text-indent:2em}
+.ulNewList a:link,.ulNewList a:visited{color:#fff;font-size:12px;font-weight:bolder;}
+.ulMenuNew{padding-left:5px;padding-bottom:50px;padding-top:10px;color:#fff;
+           width:173px;margin-bottom:10px;}
+.ulMenuNew li{line-height:15px; padding-left:20px;margin-bottom:5px;}
+.ulMenuNew a:link,.ulMenuNew a:visited{color:#fff;font-size:12px;font-weight:bolder;}
+/*////////////新闻详细页*/
+.dlNews{clear:both;padding:0px 5px 5px 10px;color:black;}
+.dlNews dt{font-size:16px;font-weight:bolder;border-bottom:solid 2px #026af2;}
+.dlNews dd{line-height:25px;padding-left:10px;width:750px; overflow:hidden;}
+.dlNews .about{padding:5px;margin-bottom:10px; border:solid 1px #54A0AD;}
+.dlNews a:link,.dlNews a:visited{color:#fff;}
+.dateStr {float:right; width:140px;text-align:left;	line-height:25px;font-size:12px;color:#cccccc;font-family:宋体;}
+/*////////////////////价格区间*/
+.proPrice{width:240px;text-align:center;background:url(/images/hotSell_back.gif) repeat-x;}
+.hidden{ display:none]

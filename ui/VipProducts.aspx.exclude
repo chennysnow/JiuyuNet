@@ -1,0 +1,46 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
+    CodeFile="VipProducts.aspx.cs" Inherits="VipProducts" %>
+
+<%@ Register Src="userCon/productType.ascx" TagName="productType" TagPrefix="uc2" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div class="indexLeft">
+        <uc2:productType ID="productType1" runat="server" />
+    </div>
+    <div class="indexRight">
+        <div class="site">
+            <a href="index.html">Home</a> > <a href="#">VipProducts</a>
+        </div>
+        <asp:Repeater ID="repProDisplay" runat="server">
+            <HeaderTemplate>
+                <ul class="ulprodisplay">
+            </HeaderTemplate>
+            <ItemTemplate>
+                <li><a href="<%# Eval("htmlName") %>" target="_blank">
+                    <img src="UpdataImage/<%# Eval("fileName") %>/s<%# Eval("imgC").ToString() %>" alt="<%# Eval("nameC") %>" /></a>
+                    <div>
+                        <%# Eval("nameC") %>&nbsp;<span class='price'>$<%# Eval("priceC") %></span></div>
+                    <div class="itemNo">
+                        <a href="<%# Eval("htmlName") %>">Item No.:<%# Eval("proId") %></a></div>
+                </li>
+            </ItemTemplate>
+            <FooterTemplate>
+                </ul></FooterTemplate>
+        </asp:Repeater>
+        <div class="page">
+            <webdiyer:AspNetPager ID="AspNetPager1" runat="server" Width="100%" UrlPaging="True"
+                FirstLastButtonStyle="" CurrentPageButtonClass="page_current" CustomInfoClass=""
+                CustomInfoHTML="%RecordCount% item(s) &nbsp;&nbsp; Page %CurrentPageIndex% of %PageCount%"
+                FirstPageText="First" LastPageText="Last" NextPageText="Next" PrevPageText="Prev"
+                ShowCustomInfoSection="Left" ShowPageIndexBox="Always" SubmitButtonText="Go"
+                CustomInfoTextAlign="Left" PagingButtonLayoutType="Span"
+                HorizontalAlign="Right" NumericButtonCount="5"  AlwaysShow="True"
+                CustomInfoSectionWidth="30%" onpagechanged="AspNetPager1_PageChanged">
+            </webdiyer:AspNetPager>
+            <br />
+            <br />
+            <br />
+        </div>
+    </div>
+</asp:Content>

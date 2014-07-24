@@ -1,0 +1,16 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="proCategory.aspx.cs" Inherits="proCategory" Title="无标题页" %>
+<%@ MasterType VirtualPath="MasterPage.master" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<asp:Repeater ID="repProDisplay" runat="server" >
+<HeaderTemplate><ul id="ulprodisplay"></HeaderTemplate>
+<ItemTemplate>
+<li><a href="<%# Eval("htmlName") %>" target="_blank">
+    <img src="<%# Eval("urlC") %>"   alt="<%# Eval("nameC") %>" /></a>
+    <div class="center"><%# Eval("nameC") %><br /></div></li>
+</ItemTemplate>
+<FooterTemplate></ul></FooterTemplate>
+</asp:Repeater>
+</asp:Content>
+

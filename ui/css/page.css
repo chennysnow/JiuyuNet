@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* 分页 */
+.page {
+	width:99%;
+	margin:0px auto 10px auto;
+	clear:both;
+	text-align:center;	 overflow:hidden;
+	color:#fff;
+	}
+.page span
+{
+	color:#333;	
+	margin-right:3px;
+	display:inline-block;
+	padding:3px;
+	text-align:center;
+	}
+.page a:link,  .page a:visited, .page a:hover, .page a:active {
+		   color:#fff;
+}
+.page .pageBtn{height:25px;width:25px;  cursor:pointer;}
+.page .page_current {
+	color:#f00;	
+	margin-right:3px;
+	display:inline-block;
+	padding:3px;
+	text-align:center;
+	width:12px;
+}
