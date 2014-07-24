@@ -1,0 +1,94 @@
+﻿
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    
+        <link href="js/Ext/resources/css/ext-admin.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/Ext/ext-all.js" type="text/javascript"></script>
+
+
+
+
+    <script type="text/javascript">
+        Ext.onReady(function () {
+            // 开启表单提示 
+            Ext.QuickTips.init();
+            // 设置提示信息位置为边上 
+            Ext.form.Field.prototype.msgTarget = 'side';
+            var win = new Ext.Window({
+                id: 'login-win',
+                title: '会员登陆',
+                iconCls: 'tabs',
+                width: 300,
+                height: 120,
+                collapsible: true,
+                plain: true,
+                // 初始化表单面板 
+                items: new Ext.form.FormPanel({
+                    id: 'login-form',
+                    labelWidth: 50, // 默认标签宽度板 
+                    labelAlign: 'right',
+                    buttonAlign: 'center',
+                    // 不设置该值，表单将保持原样，设置后表单与窗体完全融合 
+                    baseCls: 'header',
+                    layout: 'form',
+                    defaults: {
+                        width: 200
+                    },
+                    // 默认字段类型 
+                    defaultType: 'textfield',
+                    items: [{
+                        id: 'username',
+                        fieldLabel: '账号',
+                        allowBlank: false
+                        // 禁止为空 
+                    }, {
+                        id: 'password',
+                        inputType: 'password',
+                        fieldLabel: '密码',
+                        allowBlank: false
+                    }],
+                    // 初始化按钮 
+                    buttons: [{
+                        text: '登陆',
+                        type: 'submit',
+                        handler: function () {
+                            var but = this;
+                            but.setDisabled(true);
+                            this.setText('正在登陆');
+                            // 将表单提交 
+                            Ext.getCmp('login-form').getForm().submit({
+                                url: 'check.php',
+                                method: "POST",
+                                success: function (form, action) {
+
+                                    Ext.MessageBox.alert("登录成功!");
+                                },
+                                failure: function () {
+                                    but.setText("登陆");
+                                    but.setDisabled(false);
+                                }
+                            });
+                        }
+                    }]
+                })
+            });
+            // 将窗口显示出来 
+            win.show();
+        }); 
+
+    </script>
+    
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+
+    </form>
+</body>
+</html>

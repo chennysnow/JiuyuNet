@@ -1,0 +1,26 @@
+﻿.menulevel
+{
+	width:30px;
+	}
+.operation
+{
+	width:100px;
+	}
+.trSelect{display:none;}/*/////////属性隐藏*/
+
+.menu
+{
+	text-align:left;
+	}
+.staorder
+{
+	width:120px;
+	}
+.productBottom
+{
+	background-color:#EBEBEB;
+	width:95%;
+	text-align:left;
+	height:30px;
+	line-height:30px;
+	}

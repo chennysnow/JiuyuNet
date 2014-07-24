@@ -1,0 +1,54 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class admin_product_boxEdit : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        Master.title = "修改包装信息";
+        if (!IsPostBack)
+        {
+            bin();
+        }
+    }
+    private void bin()
+    {
+        dal.box box = new dal.box();
+        mo.box model=box.getModel("where id="+Request.QueryString["id"]);
+        txtName.Text = model.nameC;
+        txtSize.Text = model.sizeC.ToString();
+        txtWeight.Text = model.weightC.ToString();
+        txtPrice.Text = model.priceC.ToString();
+        txtCount.Text = model.countC.ToString();
+        txtAbout.Text = model.aboutC;
+        ViewState["id"] = Request.QueryString["id"];
+    }
+    protected void BtOk_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            dal.box box = new dal.box();
+            mo.box model = box.getModel("where id=" + ViewState["id"].ToString());
+            model.nameC = txtName.Text;
+            model.sizeC = double.Parse(txtSize.Text);
+            model.weightC = double.Parse(txtWeight.Text);
+            if (Request.Form["fileImg"] != null && Request.Form["fileImg"].ToString() != "")
+            {
+                model.imgC = "/uploadFile/sImg" + Request.Form["fileImg"].ToString();
+            }
+            model.priceC = double.Parse(txtPrice.Text);
+            model.aboutC = txtAbout.Text;
+            model.countC = int.Parse(txtCount.Text);
+            box.UpdateModel(model);
+            op.staValue.divAlert(Page, "修改成功!","boxList.aspx");
+        }
+        catch
+        {
+            op.staValue.divAlert(Page, "添加失败,数据类型不正确!");
+        }
+    }
+}

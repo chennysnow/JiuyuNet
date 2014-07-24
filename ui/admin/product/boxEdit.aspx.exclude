@@ -1,0 +1,80 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/MasPageAdmin.master" AutoEventWireup="true" CodeFile="boxEdit.aspx.cs" Inherits="admin_product_boxEdit" %>
+<%@ MasterType VirtualPath="../MasPageAdmin.master" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="content" Runat="Server">
+<script type="text/javascript" src="../ckfinder/ckfinder.js"></script> 
+<script type="text/javascript">
+    function BrowseServer(inputId) {
+        var finder = new CKFinder();
+        finder.basePath = '../ckfinder/'; //导入CKFinder的路径 
+        finder.selectActionFunction = SetFileField; //设置文件被选中时的函数 
+        finder.selectActionData = inputId; //接收地址的input ID 
+        finder.popup();
+    }
+    //文件选中时执行 
+    function SetFileField(fileUrl, data) {
+        document.getElementById(data["selectActionData"]).value = fileUrl.substring(fileUrl.indexOf("/uploadFile") + 11);
+    } 
+</script> 
+    <table class="tableAdd">
+            <tr>
+                <td class="style1">
+                     名称:</td>
+                <td class="style3">
+                    <asp:TextBox ID="txtName" runat="server" MaxLength="100" Width="360px"></asp:TextBox></td>
+            </tr>
+             <tr>
+                <td class="style1">
+                    体积:<font style="color:Red;">*</font></td>
+                <td class="price">
+                  <asp:TextBox ID="txtSize" runat="server" Text="0" onkeyup="if(isNaN(value))execCommand('undo')" onafterpaste="if(isNaN(value))execCommand('undo')" ></asp:TextBox><font style="color:Red">只能是数字</font>
+               </td>
+            </tr> 
+            <tr>
+                <td class="style1">
+                    重量:<font style="color:Red;">*</font></td>
+                <td class="price">
+                  <asp:TextBox ID="txtWeight" runat="server" Text="0" onkeyup="if(isNaN(value))execCommand('undo')" onafterpaste="if(isNaN(value))execCommand('undo')" ></asp:TextBox><font style="color:Red">只能是数字</font>
+               </td>
+            </tr>
+             <tr>
+                <td class="style1">
+                    价格:<font style="color:Red;">*</font></td>
+                <td class="price">
+                  <asp:TextBox ID="txtPrice" runat="server" Text="0" onkeyup="if(isNaN(value))execCommand('undo')" onafterpaste="if(isNaN(value))execCommand('undo')" ></asp:TextBox><font style="color:Red">只能是数字</font>
+               </td>
+            </tr>
+            <tr>
+                <td class="style1">
+                    卖出:<font style="color:Red;">*</font></td>
+                <td class="sort">
+                  <asp:TextBox ID="txtCount" runat="server" Text="0" ></asp:TextBox><font style="color:Red">只能是数字</font>
+               </td>
+            </tr>
+             <tr>
+                <td class="style1">
+                    图片:</td>
+                <td>
+                  <input type="text" name="fileImg" id="fileImg" style="width:300px" /><input type="button" value="浏览" onclick="BrowseServer('fileImg');" />
+               </td>
+            </tr>     
+            <tr>
+                <td class="style1">
+                    描述:</td>
+                <td class="style3">
+                       <asp:TextBox ID="txtAbout" TextMode="MultiLine" 
+Text='' runat="server" Width="400px" Height="100px"></asp:TextBox>
+                    
+                    </td>
+            </tr>
+            <tr>
+            <td></td>
+                <td>
+                  
+                   <asp:Button ID="BtOk" runat="server" Text="确定" onclick="BtOk_Click" CssClass="btn_white" />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input id="btnBack" class="btn_white"  type="button" value="返回列表"  onclick="window.location.href='boxList.aspx';" />
+                </td>
+            </tr>
+        </table>
+</asp:Content>

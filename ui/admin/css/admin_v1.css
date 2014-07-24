@@ -1,0 +1,17 @@
+﻿body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td{margin:0; padding:0;}
+body{font-size:12px;}
+*{margin:0px;padding:0px;list-style:none;}
+a:link,a:visited,a:hover,a:active{text-decoration:none;font-family:宋体;color:black;font-size:10pt; }
+a:hover{color:#611;}
+
+
+.title{ font-size:16px; background:url(../img/title-bg.gif) repeat-x;height:28px; line-height:28px;border:1px solid #eee;margin:0px 0 5px 0; padding-left:20px;}
+.title span{ background:url(../img/biao_san.gif) no-repeat center;width:30px;height:12px;margin-right:5px;}
+.menu1{ padding:10px 0px;}
+.menu1 ul li{ float:left; width:65px; text-align:center; padding-top:4px;}
+.menu1 ul .click{ font-weight:bold; color:Red;}
+.content table{border-collapse:collapse;border-color:#E6E6E6;border-style:solid;border-width:0 1px 1px;}
+.tb-void{overflow:hidden;border-top:1px solid #E6E6E6; margin-top:20px; }
+.tb-void th{background:url("/admin/img/tb-th.gif") repeat-x scroll 0 0 #F7F7F7;color:#666666;font-weight:normal;height:31px;}
+.tb-void td{border-color:#E6E6E6;border-style:solid;border-width:1px 0 0 1px;padding:5px 4px;text-align:center;}
+.red{color:#e74700;}

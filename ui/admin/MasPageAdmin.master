@@ -1,0 +1,177 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasPageAdmin.master.cs"
+    Inherits="admin_MasPageAdmin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="textml; charset=utf8" />
+
+    <title><%= title %></title>
+    <link href="/admin/css/admin.css" rel="stylesheet" type="text/css" />
+    <link href="/admin/css/table.css" rel="stylesheet" type="text/css" />
+    <script src="/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function checkAll(elementId, obj) {
+            $("#" + elementId).click(function () {
+                if ($(this).attr("checked")) {
+                    $(obj + " input[type=checkbox]").attr("checked", "true");
+                } else {
+                    $(obj + " input[type=checkbox]").removeAttr("checked");
+                }
+            });
+        }
+        var setImgObj = "";
+        function BrowseServer(setImg) {
+            setImgObj = setImg;
+            window.open("/admin/imgManage/default.aspx");
+            return false;
+        }
+        function SetUrl(imgName) {
+            $("#" + setImgObj).val(imgName);
+            setImgObj = "";
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+        <div class="top" style=" display:none;">
+            <div class="logo">
+                <img src="/admin/img/logo.gif" align="left" />
+                <div>
+                    欢迎登陆!</div>
+            </div>
+            <div class="center">
+                <font color="red">电话:</font>0579-8581717 <font color="red">服务时间:</font>8:30-17:30(星期一至星期六)
+                <span style="margin-left: 20px;">
+                <a href="/index.aspx" target="_blank">
+                    <img src="/admin/img/top_nav0.gif" style="margin: 4px 0; vertical-align: middle;" /></a>&nbsp;
+                    <a href="/admin/index.aspx">
+                    <img src="/admin/img/top_nav1.gif" style="margin: 4px 0; vertical-align: middle;" /></a>&nbsp;
+                    <a href="/admin/Product/add.aspx">
+                        <img src="/admin/img/top_nav2.gif" style="margin: 4px 0; vertical-align: middle;" /></a>&nbsp;
+                    <a href="/admin/msg/message.aspx">
+                        <img src="/admin/img/top_nav4.gif" style="margin: 4px 0; vertical-align: middle;" /></a>&nbsp;
+                        <a  href="/admin/default.aspx?type=LoginOut">安全退出</a>
+                        <span id="time" style="color:#B30600; margin-left:0px;"></span>
+                    <%--<a href="Admin_html.php"><img src="images/top_nav5.gif" style="margin:4px 0;  vertical-align:middle;"/></a>--%>
+                </span>
+            </div>
+            <!--菜单开始-->
+            <ul class="ul_menu" >
+            <li>
+            <a href="/admin/Product/list.aspx" class="pre">商品管理</a>
+            <ul class="son_menu">
+                <li><a href="/admin/Product/attrList.aspx">属性管理</a></li><li><a href="/admin/Product/type.aspx">类别管理</a></li>
+                <li><a href="/admin/Product/list.aspx">商品列表</a></li><li><a href="/admin/Product/add.aspx">添加商品</a></li>
+                <li><a href="/admin/Product/batch.aspx">批量上传</a></li>
+            </ul>
+            </li>
+
+              <li>
+            <a href="/admin/Product/list.aspx?type=tg" class="pre">商品推广</a></li>
+
+            <li>
+            <a href="/admin/news/speList.aspx" class="pre">信息管理</a>
+                <ul class="son_menu">
+                    
+                    <li><a href="/admin/news/noHtmlName.aspx?id=1">关于我们</a></li>
+                    <li><a href="/admin/news/noHtmlName.aspx?id=2">联系我们</a></li>
+                    <li><a href="/admin/news/content.aspx?id=3">网站底部</a></li>
+                    <li><a href="/admin/news/content.aspx?id=4">在线聊天</a></li>
+                    <li><a href="/admin/news/noHtmlName.aspx?id=5">新产品</a></li>
+                    <li><a href="/admin/news/noHtmlName.aspx?id=6">效果图展示</a></li>
+                    <li><a href="/admin/news/noHtmlName.aspx?id=7">客户</a></li>
+
+                    <li style="display:none"><a href="/admin/news/speList.aspx">特殊文章</a></li>
+                    <li style="display:none"><a href="/admin/news/type.aspx">文章类别</a></li>
+                    <li style="display:none"><a href="/admin/news/list.aspx">文章列表</a></li>
+                    <li style="display:none"><a href="/admin/news/add.aspx">添加文章</a></li>
+                </ul>
+            </li>
+
+                           <li><a href="#" class="pre">供应商管理</a>
+                <ul class="son_menu">
+                <li><a href="/admin/supply/attrList.aspx">属性管理</a></li>
+                <li><a href="/admin/supply/add.aspx">添加供应商</a></li>
+                 <li><a href="/admin/supply/list.aspx">供应商列表</a></li>
+                  <li><a href="/admin/supply/prosupply.aspx">供应商对应产品</a></li>
+                  </ul></li>
+            <li><a href="#" class="pre">网站常规管理</a>
+                <ul class="son_menu">
+                    <li><a href="/admin/setUp/htuser.aspx">系统账号</a></li>
+                    <li><a href="/admin/setUp/set.aspx">系统参数设置</a></li>
+                    <li><a href="/admin/setUp/link.aspx">友情链接</a></li>
+                    <li><a href="/admin/setUp/flash.aspx" >切换图片</a></li>
+                </ul>
+            </li>
+             <li><a href="/admin/seo/keywords.aspx" class="pre">Seo管理</a>
+            <ul class="son_menu">
+              <li><a href="/admin/seo/keywords.aspx">页面设置</a></li>
+            <li><a href="/admin/seo/allKey.aspx">关键词管理</a></li>
+            <li><a href="/admin/seo/filterKey.aspx">关键词过滤</a></li>
+            </ul>
+            </li>
+            <li><a href="#" class="pre">快递与支付</a>
+                <ul class="son_menu">
+                     <li><a href="/admin/user/place.aspx">地方管理</a></li>
+                     <li><a href="/admin/user/post.aspx">快递管理</a></li>
+                     <li><a href="/admin/user/payment.aspx">支付管理</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="pre">用户与订单</a>
+                <ul class="son_menu">
+                    <li><a href="/admin/user/coupon.aspx">优惠券管理</a></li>
+                    <li><a href="/admin/user/User.aspx">所有用户</a></li>
+                    <li><a href="/admin/user/Order.aspx">用户订单</a></li>
+                </ul>
+            </li>
+            <li><a href="/admin/msg/message.aspx" class="pre">用户留言</a>
+                <ul class="son_menu">
+                    <li><a href="/admin/msg/message.aspx">用户留言</a></li>
+                    <li><a href="/admin/msg/message.aspx?typ=1">用户询盘</a></li>
+                </ul>
+            </li>
+           <li><a href="/admin/siteMap.aspx" class="pre">生成地图</a></li>
+            <li></li>
+            </ul>
+            <div id="showMenu" class="cl"><ul><li></li></ul></div>
+        </div>
+         <script src="/admin/js/jsBottom.js" type="text/javascript"></script>
+        <div class="middle">
+        <div class="site"><span>&nbsp;&nbsp;</span><%= title %></div>
+        <form id="form1" runat="server">
+         <asp:ContentPlaceHolder ID="content" runat="server">
+    </asp:ContentPlaceHolder>
+        </form>
+        </div>
+        <div class="bottom_menu" style=" display:none;">
+        <a href="/admin/Product/list.aspx">商品列表</a>
+        <a href="/admin/Product/add.aspx">添加商品</a>
+        <a href="/admin/Product/batch.aspx">批量上传</a>
+        <%--<a href="/admin/news/add.aspx">添加文章</a>
+        <a href="/admin/news/list.aspx">文章列表</a>--%>
+        <a href="/admin/link.aspx" class="pre">友情链接</a>
+        <a href="/admin/flash.aspx" class="pre">切换图片</a>
+        <a href="/admin/user/User.aspx">所有用户</a>
+        <a href="/admin/user/Order.aspx">用户订单</a>
+        </div>
+        <div style=" display:none;">
+            <p>地址:浙江义乌稠州北路1121号福田大厦A座3楼40-44号</p>
+            <p>技术热线:0579-85871717</p>
+            <p>版权所有@ 义乌市九域网络技术有限公司</p>
+        </div>
+
+    <script type="text/javascript">
+        //全局变化 
+        $("input[type='text']").focus(function () {
+            $(this).addClass("border");
+        }).blur(function () { $(this).removeClass("border"); });
+        //整数
+        $(".sort input").blur(function () {
+            $(this).val($(this).val().replace(/[^\d]/g, ''));
+        });
+    </script>
+</body>
+</html>

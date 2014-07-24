@@ -1,0 +1,155 @@
+﻿
+a
+{
+	color: #0068B7;
+	text-decoration: none;
+}
+a:hover
+{
+	text-decoration: underline;
+}
+
+div.fieldset
+{
+	border: 1px solid #afe14c;
+	margin: 10px 0;
+	padding: 20px 10px;
+}
+
+div.fieldset span.legend
+{
+	position: relative;
+	background-color: #FFF;
+	padding: 3px;
+	top: -30px;
+	font: 700 14px Arial, Helvetica, sans-serif;
+	color: #73b304;
+}
+
+div.flash
+{
+	width: 375px;
+	margin: 10px 5px;
+	border-color: #D9E4FF;
+}
+
+.Ico
+{
+	border-bottom: 0px;
+	border-left: 0px;
+	background-color: transparent;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	border-top: 0px;
+	border-right: 0px;
+}
+
+.IcoNormal
+{
+	float: left;
+	border-bottom: 0px;
+	border-left: 0px;
+	background-color: transparent;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	border-top: 0px;
+	border-right: 0px;
+	background-image: url(../img/upload_normal.gif);
+	background-repeat: no-repeat;
+}
+
+.IcoWaiting
+{
+	float: left;
+	border-bottom: 0px;
+	border-left: 0px;
+	background-color: transparent;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	border-top: 0px;
+	border-right: 0px;
+	background-image: url(../img/upload_waiting.gif);
+	background-repeat: no-repeat;
+}
+
+.IcoUpload
+{
+	float: left;
+	border-bottom: 0px;
+	border-left: 0px;
+	background-color: transparent;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	border-top: 0px;
+	border-right: 0px;
+	background-image: url(../img/upload.gif);
+	background-repeat: no-repeat;
+}
+
+.theFont
+{
+	color: #0068B7;
+}
+
+.fle
+{
+	float: left;
+}
+
+.statebarSmallDiv
+{
+	float: left;
+	width: 50px;
+	height: 6px;
+	background-color: #fafafa;
+	border: solid 1px #ccc;
+	vertical-align: middle;
+	margin-left: 5px;
+	margin-top: 10px;
+}
+.statebarBigDiv
+{
+	float: left;
+	width: 100px;
+	height: 6px;
+	background-color: #fafafa;
+	border: solid 1px #ccc;
+	vertical-align: middle;
+	margin-left: 5px;
+	margin-top: 4px;
+}
+.statebar
+{
+	background-color: #a5dd3d;
+	width: 30%;
+	font-size: 1px;
+	overflow: hidden;
+	line-height: 6px;
+}
+
+.ftt
+{
+	margin: 5px;
+}
+
+.progressobj
+{
+	clear: both;
+	font-family: Verdana;
+	color: #A59A98;
+	margin: 3px;
+}
+
+.progressobj A
+{
+	color: #0068B7;
+	text-decoration: underline;
+}
+.progressobj A:hover
+{
+	color: #0068B7;
+}

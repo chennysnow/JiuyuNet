@@ -1,0 +1,47 @@
+﻿/*
+body{font-size:12px;font-family:"微软雅黑","宋体", seoul, arial, helvetica;margin:0px;}
+ul,ol,dl,dd,dt,p{margin:0px;padding:0px;list-style:none;}
+img{border:none;}
+a:link,a:visited,a:hover,a:active{text-decoration:none;font-family:宋体;color:black;font-size:10pt; }
+a:hover{color:#611;}
+*/
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td{margin:0; padding:0;}
+body{font-size:12px;}
+*{margin:0px;padding:0px;list-style:none;}
+a:link,a:visited,a:hover,a:active{text-decoration:none;font-family:宋体;color:black;font-size:10pt; }
+a:hover{color:#611;}
+.top{ background-color:#e1efff; background-image:url("/admin/img/headerbg.png"); background-repeat:repeat-x; min-width:850px;}
+.logo_left{ background-image:url("/admin/img/header.png")}
+.logo_left{ width:388px; height:80px; margin:5px 0px; float:left; background-position:0 0; }
+.logo_right{ float:right; padding-top:18px; padding-right:30px;}
+.logo_right ul li{ height:24px; line-height:24px;}
+.logo_right .b,.logo_right .b1,.logo_right .b2,.logo_right .b3{ width:20px; height:20px; background-image:url("/admin/img/header.png"); display:block; float:left; margin:0px 5px;}
+
+.logo_right .b{ background-position:20px 88px;}
+.logo_right .b1{ background-position:20px 36px;}
+.logo_right .b2{ background-position:20px 70px;}
+.logo_right .b3{ background-position:20px 53px;}
+
+
+.logo_right a{ float:left;}
+.red{ color:Red;}
+
+.title{ font-size:16px; background:url(../img/title-bg.gif) repeat-x;height:28px; line-height:28px;border:1px solid #eee;margin:0px 0 5px 0; padding-left:20px;}
+.title span{ background:url(../img/biao_san.gif) no-repeat center;width:30px;height:12px;margin-right:5px;}
+.menu1{ padding:10px 0px;}
+.menu1 ul li{ float:left; width:65px; text-align:center; padding-top:4px;}
+.menu1 ul .click{ font-weight:bold; color:Red;}
+.content table{border-collapse:collapse;border-color:#E6E6E6;border-style:solid;border-width:0 1px 1px;}
+.tb-void{overflow:hidden;border-top:1px solid #E6E6E6; margin-top:20px; }
+.tb-void th{background:url("/admin/img/tb-th.gif") repeat-x scroll 0 0 #F7F7F7;color:#666666;font-weight:normal;height:31px;}
+.tb-void td{border-color:#E6E6E6;border-style:solid;border-width:1px 0 0 1px;padding:5px 4px;text-align:center;}
+
+.main_Menu{ clear:both;}
+.main_Menu ul{  background:url("/admin/img/Menubg.png") repeat-x; height:42px; min-width:850px;}
+.main_Menu ul li{ float:left; width:10%; min-width:67px; text-align:center; vertical-align:middle; line-height:42px; color:#FFF; font-size:14px; cursor:pointer;}
+
+.no-node-icon {
+  width: 20px;
+  background-position: -360px 0 !important;
+  background-image: url('/admin/js/ext/resources/themes/images/default/tree/icons-orange.png'); }

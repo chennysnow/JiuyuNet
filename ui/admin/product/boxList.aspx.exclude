@@ -1,0 +1,60 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/MasPageAdmin.master" AutoEventWireup="true" CodeFile="boxList.aspx.cs" Inherits="admin_product_boxList" %>
+<%@ MasterType VirtualPath="../MasPageAdmin.master" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="content" Runat="Server">
+    <asp:Repeater ID="repList" runat="server">
+    <HeaderTemplate>
+    <table class="table">
+    <tr class="tableHead">
+    <td style="width:30px;">选择</td>
+    <td style="width:100px">图片</td>
+    <td>标题</td>
+    <td>体积</td>
+    <td>重量</td>
+    <td>价格</td>
+    <td style="width:50px">卖出</td>
+    <td style="width:40px">操作</td>
+    </tr>
+    </HeaderTemplate>
+    <ItemTemplate>
+    <tr>
+    <td class="td_select"><input id="chkId" name="chkId" type="checkbox" value='<%# Eval("id") %>'/>
+    </td>
+    <td><img src="<%# Eval("imgC")%>" width="100" /></td>
+    <td><%# Eval("nameC")%></td>
+    <td><%# Eval("sizeC")%></td>
+    <td><%# Eval("weightC") %></td>
+    <td><%# Eval("priceC") %></td>
+    <td class="sort">
+    <input type="text" name="countC" value="<%# Eval("countC") %>" />
+    <input type="hidden" name="id" value="<%# Eval("id") %>" />
+    </td>
+   <td>
+   <a href="boxEdit.aspx?id=<%# Eval("id")%>">修改</a>        
+    </td>
+    </tr>
+    </ItemTemplate>
+    <FooterTemplate></table>
+   
+    </FooterTemplate>
+    </asp:Repeater>
+     <div class="bottom">
+     <input id="chkAll" type="checkbox"  />全选&nbsp;&nbsp;
+    <asp:LinkButton ID="lbtnBatchDelete" runat="server" OnClick="lbtnBatchDelete_Click">批量删除</asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="boxAdd.aspx">添加包装</a></div>
+        <webdiyer:AspNetPager ID="AspNetPager1" runat="server" 
+            CurrentPageButtonClass="page_current" CustomInfoClass="" 
+            CustomInfoHTML="总共[%RecordCount%]条记录  当前页/总页[%CurrentPageIndex%/%PageCount%]" 
+            CustomInfoTextAlign="Left" FirstLastButtonStyle="" FirstPageText="首页" 
+            HorizontalAlign="Right" LastPageText="末页" NextPageText="下一页" 
+            NumericButtonCount="5" OnPageChanged="AspNetPager1_PageChanged" PageSize="15" 
+            PagingButtonLayoutType="Span" PrevPageText="上一页" ShowCustomInfoSection="Left" 
+            ShowPageIndexBox="Always" SubmitButtonText="Go" UrlPageIndexName="p" 
+            UrlPaging="false" Width="95%">
+        </webdiyer:AspNetPager>
+        <script type="text/javascript">
+            checkAll("chkAll", ".td_select");
+</script>
+</asp:Content>
+
