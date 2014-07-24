@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ui", "ui\", "{1024DB91-25EC-41D6-8E78-C800D64BCAC9}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
@@ -22,9 +24,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ui", "ui\", "{1024DB91-25EC
 		VWDPort = "8542"
 		VWDDynamicPort = "true"
 		VWDVirtualPath = "/"
+		SlnRelativePath = "ui\"
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dataBin", "bin\dataBin.csproj", "{E6F6FF56-E217-430E-BFBF-4804C96CCA08}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dal", "dal\dal.csproj", "{D0E85363-36D8-468D-BDB9-7F8125751666}"
 EndProject
@@ -56,16 +57,6 @@ Global
 		{1024DB91-25EC-41D6-8E78-C800D64BCAC9}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{1024DB91-25EC-41D6-8E78-C800D64BCAC9}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
 		{1024DB91-25EC-41D6-8E78-C800D64BCAC9}.Release|x86.ActiveCfg = Debug|Any CPU
-		{E6F6FF56-E217-430E-BFBF-4804C96CCA08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E6F6FF56-E217-430E-BFBF-4804C96CCA08}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E6F6FF56-E217-430E-BFBF-4804C96CCA08}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{E6F6FF56-E217-430E-BFBF-4804C96CCA08}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{E6F6FF56-E217-430E-BFBF-4804C96CCA08}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{E6F6FF56-E217-430E-BFBF-4804C96CCA08}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E6F6FF56-E217-430E-BFBF-4804C96CCA08}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E6F6FF56-E217-430E-BFBF-4804C96CCA08}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{E6F6FF56-E217-430E-BFBF-4804C96CCA08}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{E6F6FF56-E217-430E-BFBF-4804C96CCA08}.Release|x86.ActiveCfg = Release|Any CPU
 		{D0E85363-36D8-468D-BDB9-7F8125751666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D0E85363-36D8-468D-BDB9-7F8125751666}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0E85363-36D8-468D-BDB9-7F8125751666}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU

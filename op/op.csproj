@@ -77,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Columniation.cs" />
+    <Compile Include="dataBin.cs" />
     <Compile Include="ExtTree.cs" />
     <Compile Include="mail.cs" />
     <Compile Include="Operation.cs" />
